@@ -1,0 +1,2149 @@
+{
+    "uuid": {
+        "type": "string",
+        "description": "Uuid",
+        "size": "36",
+        "nullable": false
+    },
+    "anotacao": {
+        "type": "string",
+        "description": "Anota\u00e7\u00e3o Registro",
+        "size": "500",
+        "nullable": true
+    },
+    "layout": {
+        "type": "string",
+        "description": "Layout",
+        "size": "-",
+        "nullable": false
+    },
+    "codigo_registradora": {
+        "type": "string",
+        "description": "Identifica\u00e7\u00e3o da Registradora",
+        "size": "14",
+        "nullable": false
+    },
+    "data_registro": {
+        "type": "timestamp",
+        "description": "Data do Registro",
+        "size": "-",
+        "nullable": false
+    },
+    "data_alteracao": {
+        "type": "timestamp",
+        "description": "Data da Altera\u00e7\u00e3o do Registro",
+        "size": "-",
+        "nullable": true
+    },
+    "codigo_seguradora": {
+        "type": "string",
+        "description": "C\u00f3digo da Seguradora",
+        "size": "5",
+        "nullable": false
+    },
+    "tipo_documento_atualizado": {
+        "type": "int",
+        "description": "Tipo de Documento Emitido",
+        "size": "2",
+        "nullable": false
+    },
+    "natureza_documento": {
+        "type": "int",
+        "description": "Natureza do documento",
+        "size": "1",
+        "nullable": false
+    },
+    "apolice_codigo": {
+        "type": "string",
+        "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+        "size": "60",
+        "nullable": false
+    },
+    "numero_susep_apolice": {
+        "type": "string",
+        "description": "N\u00famero Susep da Ap\u00f3lice",
+        "size": "24",
+        "nullable": true
+    },
+    "certificado_codigo": {
+        "type": "string",
+        "description": "Identificador do Certificado",
+        "size": "60",
+        "nullable": true
+    },
+    "alteracao_codigo": {
+        "type": "string",
+        "description": "Identificador da Altera\u00e7\u00e3o do Documento",
+        "size": "60",
+        "nullable": false
+    },
+    "alteracao_descricao": {
+        "type": "string",
+        "description": "Descri\u00e7\u00e3o da Altera\u00e7\u00e3o do Documento",
+        "size": "1024",
+        "nullable": true
+    },
+    "possui_endosso": {
+        "type": "boolean",
+        "description": "Possui endosso?",
+        "size": "-",
+        "nullable": false
+    },
+    "alteracao_tipo": {
+        "type": "int",
+        "description": "Tipo de Altera\u00e7\u00e3o do Documento",
+        "size": "2",
+        "nullable": false
+    },
+    "endosso_averbavel": {
+        "type": "boolean",
+        "description": "Endosso Averb\u00e1vel",
+        "size": "-",
+        "nullable": false
+    },
+    "data_emissao": {
+        "type": "date",
+        "description": "Data de Emiss\u00e3o",
+        "size": "10",
+        "nullable": false
+    },
+    "data_inicio": {
+        "type": "date",
+        "description": "Data de In\u00edcio de Vig\u00eancia da Altera\u00e7\u00e3o do Documento",
+        "size": "10",
+        "nullable": false
+    },
+    "data_termino": {
+        "type": "date",
+        "description": "Data de Fim de Vig\u00eancia da Altera\u00e7\u00e3o do Documento",
+        "size": "10",
+        "nullable": false
+    },
+    "data_inicio_documento": {
+        "type": "date",
+        "description": "Data de In\u00edcio de Vig\u00eancia Documento",
+        "size": "10",
+        "nullable": false
+    },
+    "data_termino_documento": {
+        "type": "date",
+        "description": "Data de Fim de Vig\u00eancia Documento",
+        "size": "10",
+        "nullable": false
+    },
+    "moeda_apolice": {
+        "type": "string",
+        "description": "Moeda da Ap\u00f3lice",
+        "size": "3",
+        "nullable": false
+    },
+    "taxa_cambio": {
+        "type": "decimal(10,6)",
+        "description": "Taxa de C\u00e2mbio",
+        "size": "10,6",
+        "nullable": false
+    },
+    "limite_maximo_garantia_real": {
+        "type": "decimal(18,2)",
+        "description": "Limite M\u00e1ximo de Garantia (LMG) em Reais",
+        "size": "18,2",
+        "nullable": false
+    },
+    "possui_cancelamento": {
+        "type": "boolean",
+        "description": "Possui cancelamento?",
+        "size": "-",
+        "nullable": true
+    },
+    "percentual_retido": {
+        "type": "decimal(7,4)",
+        "description": "Percentual Retido em Cosseguro",
+        "size": "7,4",
+        "nullable": false
+    },
+    "possui_beneficiario": {
+        "type": "boolean",
+        "description": "Possui Benefici\u00e1rio indicado?",
+        "size": "-",
+        "nullable": false
+    },
+    "possui_beneficiario_final": {
+        "type": "boolean",
+        "description": "Possui Benefici\u00e1rios Finais indicados?",
+        "size": "-",
+        "nullable": false
+    },
+    "possui_intermediario": {
+        "type": "boolean",
+        "description": "Possui Intermedi\u00e1rio?",
+        "size": "-",
+        "nullable": false
+    },
+    "alteracao_associada": {
+        "type": [
+            {
+                "alteracao_associada_codigo": {
+                    "type": "string",
+                    "description": "Identificador da Altera\u00e7\u00e3o Associada",
+                    "size": "60",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Altera\u00e7\u00e3o Associada",
+        "size": "-",
+        "nullable": true
+    },
+    "segurado_participante": {
+        "type": [
+            {
+                "documento": {
+                    "type": "string",
+                    "description": "Documento de Identifica\u00e7\u00e3o da Pessoa Associada",
+                    "size": "40",
+                    "nullable": false
+                },
+                "tipo_documento": {
+                    "type": "int",
+                    "description": "Tipo de Documento da Pessoa Associada",
+                    "size": "2",
+                    "nullable": false
+                },
+                "nome": {
+                    "type": "string",
+                    "description": "Nome ou Raz\u00e3o Social da Pessoa Associada",
+                    "size": "144",
+                    "nullable": false
+                },
+                "nome_social": {
+                    "type": "string",
+                    "description": "Nome social",
+                    "size": "144",
+                    "nullable": true
+                },
+                "data_nascimento": {
+                    "type": "date",
+                    "description": "Data Nascimento",
+                    "size": "10",
+                    "nullable": true
+                },
+                "sexo": {
+                    "type": "int",
+                    "description": "Sexo da Pessoa Associada",
+                    "size": "2",
+                    "nullable": true
+                },
+                "codigo_postal": {
+                    "type": "string",
+                    "description": "C\u00f3digo Postal da Pessoa Associada",
+                    "size": "30",
+                    "nullable": false
+                },
+                "uf": {
+                    "type": "string",
+                    "description": "UF do segurado ou participante",
+                    "size": "2",
+                    "nullable": false
+                },
+                "pais": {
+                    "type": "string",
+                    "description": "Pa\u00eds da Pessoa Associada",
+                    "size": "3",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Pessoa Associada - Segurado/Participante",
+        "size": "-",
+        "nullable": true
+    },
+    "beneficiario": {
+        "type": [
+            {
+                "documento": {
+                    "type": "string",
+                    "description": "Documento de Identifica\u00e7\u00e3o da Pessoa Associada",
+                    "size": "40",
+                    "nullable": false
+                },
+                "tipo_documento": {
+                    "type": "int",
+                    "description": "Tipo de Documento da Pessoa Associada",
+                    "size": "2",
+                    "nullable": false
+                },
+                "nome": {
+                    "type": "string",
+                    "description": "Nome ou Raz\u00e3o Social da Pessoa Associada",
+                    "size": "144",
+                    "nullable": false
+                },
+                "nome_social": {
+                    "type": "string",
+                    "description": "Nome social do benefici\u00e1rio",
+                    "size": "144",
+                    "nullable": true
+                },
+                "codigo_postal": {
+                    "type": "string",
+                    "description": "C\u00f3digo Postal da Pessoa Associada",
+                    "size": "30",
+                    "nullable": false
+                },
+                "uf": {
+                    "type": "string",
+                    "description": "UF do benefici\u00e1rio",
+                    "size": "2",
+                    "nullable": false
+                },
+                "pais": {
+                    "type": "string",
+                    "description": "Pa\u00eds da Pessoa Associada",
+                    "size": "3",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Pessoa Associada - Benefici\u00e1rio",
+        "size": "-",
+        "nullable": true
+    },
+    "beneficiario_final": {
+        "type": [
+            {
+                "documento": {
+                    "type": "string",
+                    "description": "Documento de Identifica\u00e7\u00e3o do Benefici\u00e1rio Final",
+                    "size": "40",
+                    "nullable": false
+                },
+                "tipo_documento": {
+                    "type": "int",
+                    "description": "Tipo de Documento do Benefici\u00e1rio Final",
+                    "size": "2",
+                    "nullable": false
+                },
+                "nome": {
+                    "type": "string",
+                    "description": "Nome do Benefici\u00e1rio Final",
+                    "size": "144",
+                    "nullable": false
+                },
+                "nome_social": {
+                    "type": "string",
+                    "description": "Nome social do benefici\u00e1rio final",
+                    "size": "144",
+                    "nullable": true
+                },
+                "codigo_postal": {
+                    "type": "string",
+                    "description": "C\u00f3digo Postal do Benefici\u00e1rio Final",
+                    "size": "30",
+                    "nullable": false
+                },
+                "uf": {
+                    "type": "string",
+                    "description": "UF do benefici\u00e1rio final",
+                    "size": "2",
+                    "nullable": false
+                },
+                "pais": {
+                    "type": "string",
+                    "description": "Pa\u00eds do Benefici\u00e1rio Final",
+                    "size": "3",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Benefici\u00e1rio Final",
+        "size": "-",
+        "nullable": true
+    },
+    "tomador_garantido": {
+        "type": [
+            {
+                "documento": {
+                    "type": "string",
+                    "description": "Documento de Identifica\u00e7\u00e3o da Pessoa Associada",
+                    "size": "40",
+                    "nullable": false
+                },
+                "tipo_documento": {
+                    "type": "int",
+                    "description": "Tipo de Documento da Pessoa Associada",
+                    "size": "2",
+                    "nullable": false
+                },
+                "nome": {
+                    "type": "string",
+                    "description": "Nome ou Raz\u00e3o Social da Pessoa Associada",
+                    "size": "144",
+                    "nullable": false
+                },
+                "codigo_postal": {
+                    "type": "string",
+                    "description": "C\u00f3digo Postal da Pessoa Associada",
+                    "size": "30",
+                    "nullable": false
+                },
+                "uf": {
+                    "type": "string",
+                    "description": "UF do tomador ou garantido",
+                    "size": "2",
+                    "nullable": false
+                },
+                "pais": {
+                    "type": "string",
+                    "description": "Pa\u00eds da Pessoa Associada",
+                    "size": "3",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Pessoa Associada - Tomador/Garantido",
+        "size": "-",
+        "nullable": true
+    },
+    "intermediario": {
+        "type": [
+            {
+                "tipo": {
+                    "type": "int",
+                    "description": "Tipo do Intermedi\u00e1rio",
+                    "size": "2",
+                    "nullable": false
+                },
+                "documento": {
+                    "type": "string",
+                    "description": "Documento do Intermedi\u00e1rio",
+                    "size": "40",
+                    "nullable": false
+                },
+                "codigo": {
+                    "type": "string",
+                    "description": "Identificador do Corretor",
+                    "size": "40",
+                    "nullable": true
+                },
+                "tipo_documento": {
+                    "type": "int",
+                    "description": "Tipo de Documento do Intermedi\u00e1rio",
+                    "size": "2",
+                    "nullable": false
+                },
+                "nome": {
+                    "type": "string",
+                    "description": "Nome ou Raz\u00e3o Social do Intermedi\u00e1rio",
+                    "size": "144",
+                    "nullable": false
+                },
+                "codigo_postal": {
+                    "type": "string",
+                    "description": "C\u00f3digo Postal do Intermedi\u00e1rio",
+                    "size": "30",
+                    "nullable": false
+                },
+                "uf": {
+                    "type": "string",
+                    "description": "UF do intermedi\u00e1rio",
+                    "size": "2",
+                    "nullable": false
+                },
+                "pais": {
+                    "type": "string",
+                    "description": "Pa\u00eds da Pessoa Associada",
+                    "size": "3",
+                    "nullable": false
+                },
+                "valor_comissao_real": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor de Comiss\u00e3o do Intermedi\u00e1rio em Reais",
+                    "size": "18,2",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Intermedi\u00e1rio",
+        "size": "-",
+        "nullable": true
+    },
+    "cobertura_risco_seguro": {
+        "type": [
+            {
+                "grupo_ramo": {
+                    "type": "string",
+                    "description": "Grupo e Ramo da Cobertura",
+                    "size": "4",
+                    "nullable": false
+                },
+                "cod_cobertura_risco": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Cobertura",
+                    "size": "5",
+                    "nullable": false
+                },
+                "outras_descricao": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o / Nome da Cobertura",
+                    "size": "500",
+                    "nullable": true
+                },
+                "cobertura_interna_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo Interno da Cobertura da Seguradora",
+                    "size": "50",
+                    "nullable": false
+                },
+                "numero_processo": {
+                    "type": "string",
+                    "description": "N\u00famero do Processo Susep da Cobertura",
+                    "size": "20",
+                    "nullable": false
+                },
+                "limite_maximo_indenizacao_real": {
+                    "type": "decimal(18,2)",
+                    "description": "Limite M\u00e1ximo de Indeniza\u00e7\u00e3o (LMI) em Reais",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "data_inicio_cobertura": {
+                    "type": "date",
+                    "description": "Data de In\u00edcio de Vig\u00eancia da Cobertura",
+                    "size": "10",
+                    "nullable": false
+                },
+                "data_termino_cobertura": {
+                    "type": "date",
+                    "description": "Data de Fim de Vig\u00eancia da Cobertura",
+                    "size": "10",
+                    "nullable": false
+                },
+                "indice_atualizacao": {
+                    "type": "int",
+                    "description": "\u00cdndice/Crit\u00e9rio de Atualiza\u00e7\u00e3o da Cobertura",
+                    "size": "2",
+                    "nullable": false
+                },
+                "descricao_indice_atualizacao": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o do \u00cdndice/Crit\u00e9rio de Atualiza\u00e7\u00e3o da Cobertura",
+                    "size": "500",
+                    "nullable": true
+                },
+                "cobertura_caracteristica": {
+                    "type": "int",
+                    "description": "Caracter\u00edstica da Cobertura",
+                    "size": "2",
+                    "nullable": false
+                },
+                "tipo_risco": {
+                    "type": "int",
+                    "description": "Tipo do Risco",
+                    "size": "2",
+                    "nullable": false
+                },
+                "cobertura_tipo": {
+                    "type": "int",
+                    "description": "Tipo de Cobertura",
+                    "size": "2",
+                    "nullable": false
+                },
+                "periodicidade_premio": {
+                    "type": "int",
+                    "description": "Periodicidade do Pr\u00eamio",
+                    "size": "2",
+                    "nullable": false
+                },
+                "descricao_periodicidade": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o Periodidicidade Pr\u00eamio",
+                    "size": "500",
+                    "nullable": true
+                },
+                "valor_premio_real": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor de Pr\u00eamio da Cobertura em Reais",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "iof": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor de IOF da Cobertura em Reais",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "base_indenizacao": {
+                    "type": "int",
+                    "description": "Base de indeniza\u00e7\u00e3o",
+                    "size": "2",
+                    "nullable": true
+                },
+                "possui_carencia": {
+                    "type": "boolean",
+                    "description": "Possui car\u00eancia?",
+                    "size": "-",
+                    "nullable": false
+                },
+                "possui_franquia": {
+                    "type": "boolean",
+                    "description": "Possui franquia?",
+                    "size": "-",
+                    "nullable": false
+                },
+                "possui_pos": {
+                    "type": "boolean",
+                    "description": "Possui POS?",
+                    "size": "-",
+                    "nullable": false
+                },
+                "carencia": {
+                    "type": [
+                        {
+                            "identificador_carencia": {
+                                "type": "string",
+                                "description": "Identifica\u00e7\u00e3o da Car\u00eancia",
+                                "size": "50",
+                                "nullable": false
+                            },
+                            "carencia_periodo": {
+                                "type": "int",
+                                "description": "Per\u00edodo de Car\u00eancia",
+                                "size": "5",
+                                "nullable": false
+                            },
+                            "carencia_periodicidade": {
+                                "type": "int",
+                                "description": "Periodicidade da Car\u00eancia",
+                                "size": "1",
+                                "nullable": false
+                            },
+                            "carencia_periodicidade_dias": {
+                                "type": "int",
+                                "description": "Indicador de Dias \u00dateis ou Corridos",
+                                "size": "1",
+                                "nullable": false
+                            },
+                            "carencia_descricao": {
+                                "type": "string",
+                                "description": "Descri\u00e7\u00e3o da car\u00eancia",
+                                "size": "50",
+                                "nullable": false
+                            }
+                        }
+                    ],
+                    "description": "Car\u00eancia",
+                    "size": "-",
+                    "nullable": true
+                },
+                "franquia": {
+                    "type": {
+                        "franquia_tipo": {
+                            "type": "int",
+                            "description": "Tipo de Franquia",
+                            "size": "2",
+                            "nullable": false
+                        },
+                        "tipo_descricao": {
+                            "type": "string",
+                            "description": "Descri\u00e7\u00e3o do Tipo de Franquia",
+                            "size": "500",
+                            "nullable": true
+                        },
+                        "valor_ou_prazo": {
+                            "type": "int",
+                            "description": "Franquia de valor ou prazo?",
+                            "size": "1",
+                            "nullable": false
+                        },
+                        "franquia_valor": {
+                            "type": "decimal(18,2)",
+                            "description": "Valor da Franquia",
+                            "size": "18,2",
+                            "nullable": true
+                        },
+                        "franquia_prazo": {
+                            "type": "int",
+                            "description": "Prazo da Franquia",
+                            "size": "5",
+                            "nullable": true
+                        },
+                        "franquia_periodicidade": {
+                            "type": "int",
+                            "description": "Periodicidade da Franquia",
+                            "size": "1",
+                            "nullable": true
+                        },
+                        "franquia_periodicidade_dias": {
+                            "type": "int",
+                            "description": "Indicador de Dias \u00dateis ou Corridos",
+                            "size": "1",
+                            "nullable": true
+                        },
+                        "possui_franquia_ind_integr": {
+                            "type": "boolean",
+                            "description": "Possui franquia sobre indeniza\u00e7\u00e3o integral?",
+                            "size": "-",
+                            "nullable": true
+                        }
+                    },
+                    "description": "Franquia",
+                    "size": "-",
+                    "nullable": true
+                },
+                "pos": {
+                    "type": {
+                        "pos_aplicacao": {
+                            "type": "int",
+                            "description": "Forma de Aplica\u00e7\u00e3o do POS",
+                            "size": "2",
+                            "nullable": false
+                        },
+                        "pos_descricao": {
+                            "type": "string",
+                            "description": "Descri\u00e7\u00e3o do POS",
+                            "size": "500",
+                            "nullable": true
+                        },
+                        "pos_valor_minimo": {
+                            "type": "decimal(18,2)",
+                            "description": "Valor M\u00ednimo do POS",
+                            "size": "18,2",
+                            "nullable": false
+                        },
+                        "pos_valor_maximo": {
+                            "type": "decimal(18,2)",
+                            "description": "Valor M\u00e1ximo do POS",
+                            "size": "18,2",
+                            "nullable": false
+                        },
+                        "percentual_pos": {
+                            "type": "decimal(7,4)",
+                            "description": "Percentual do POS",
+                            "size": "7,4",
+                            "nullable": false
+                        }
+                    },
+                    "description": "Participa\u00e7\u00e3o Obrigat\u00f3ria do Segurado",
+                    "size": "-",
+                    "nullable": true
+                },
+                "pessoas": {
+                    "type": {
+                        "inclusao_dependentes": {
+                            "type": "int",
+                            "description": "Cl\u00e1usula de Inclus\u00e3o de Dependentes Segurados",
+                            "size": "1",
+                            "nullable": false
+                        },
+                        "abrangencia_viagem": {
+                            "type": "int",
+                            "description": "Abrang\u00eancia da Viagem",
+                            "size": "1",
+                            "nullable": true
+                        },
+                        "regime_financeiro": {
+                            "type": "int",
+                            "description": "Regime Financeiro",
+                            "size": "1",
+                            "nullable": false
+                        },
+                        "forma_tarifacao": {
+                            "type": "int",
+                            "description": "Forma de Tarifa\u00e7\u00e3o",
+                            "size": "2",
+                            "nullable": false
+                        },
+                        "forma_tarifacao_descricao": {
+                            "type": "string",
+                            "description": "Descri\u00e7\u00e3o da forma de tarifa\u00e7\u00e3o",
+                            "size": "500",
+                            "nullable": true
+                        },
+                        "dependente": {
+                            "type": [
+                                {   
+                                    "identificador_segurado_dependente": {
+                                        "type": "string",
+                                        "description": "Identificador do Segurado Dependente",
+                                        "size": "40",
+                                        "nullable": false
+                                    },
+                                    "documento": {
+                                        "type": "string",
+                                        "description": "Documento de Identifica\u00e7\u00e3o do Segurado Dependente",
+                                        "size": "40",
+                                        "nullable": true
+                                    },
+                                    "tipo_documento": {
+                                        "type": "int",
+                                        "description": "Tipo de Documento da Pessoa Associada",
+                                        "size": "2",
+                                        "nullable": true
+                                    },
+                                    "parentesco": {
+                                        "type": "int",
+                                        "description": "Grau de Parentesco",
+                                        "size": "2",
+                                        "nullable": true
+                                    },
+                                    "nome": {
+                                        "type": "string",
+                                        "description": "Nome ou Raz\u00e3o Social da Pessoa Associada",
+                                        "size": "144",
+                                        "nullable": true
+                                    },
+                                    "nome_social": {
+                                        "type": "string",
+                                        "description": "Nome social do segurado dependente",
+                                        "size": "144",
+                                        "nullable": true
+                                    },
+                                    "codigo_postal": {
+                                        "type": "string",
+                                        "description": "C\u00f3digo Postal da Pessoa Associada",
+                                        "size": "30",
+                                        "nullable": true
+                                    },
+                                    "uf": {
+                                        "type": "string",
+                                        "description": "UF do segurado dependente",
+                                        "size": "2",
+                                        "nullable": true
+                                    },
+                                    "pais": {
+                                        "type": "string",
+                                        "description": "Pa\u00eds da Pessoa Associada",
+                                        "size": "3",
+                                        "nullable": true
+                                    },
+                                    "data_nascimento": {
+                                        "type": "date",
+                                        "description": "Data de Nascimento do segurado",
+                                        "size": "10",
+                                        "nullable": true
+                                    }
+                                }
+                            ],
+                            "description": "Dados do Segurado Dependente",
+                            "size": "-",
+                            "nullable": true
+                        }
+                    },
+                    "description": "Pessoas",
+                    "size": "-",
+                    "nullable": true
+                },
+                "prestamista": {
+                    "type": {
+                        "modalidade_capital": {
+                            "type": "int",
+                            "description": "Modalidade de Capital Segurado",
+                            "size": "1",
+                            "nullable": false
+                        },
+                        "prestamista_tipo": {
+                            "type": "int",
+                            "description": "Tipo de Prestamista",
+                            "size": "1",
+                            "nullable": false
+                        },
+                        "tipo_obrigacao": {
+                            "type": "int",
+                            "description": "Tipo de Obriga\u00e7\u00e3o",
+                            "size": "2",
+                            "nullable": false
+                        },
+                        "descricao_obrigacao": {
+                            "type": "string",
+                            "description": "Descri\u00e7\u00e3o Tipo da Obriga\u00e7\u00e3o",
+                            "size": "500",
+                            "nullable": true
+                        }
+                    },
+                    "description": "Prestamista",
+                    "size": "-",
+                    "nullable": true
+                },
+                "complementar_rcc_capitalizacao": {
+                    "type": [
+                        {
+                            "identificador_rcc_cap": {
+                                "type": "string",
+                                "description": "Identificador complementar RCC e Cap",
+                                "size": "50",
+                                "nullable": false
+                            },
+                            "tabua_tipo": {
+                                "type": "int",
+                                "description": "Tipo de T\u00e1bua",
+                                "size": "2",
+                                "nullable": false
+                            },
+                            "tabua_biometrica": {
+                                "type": "int",
+                                "description": "T\u00e1bua Biom\u00e9trica",
+                                "size": "2",
+                                "nullable": false
+                            },
+                            "percentual_acum_rcc_cap": {
+                                "type": "decimal(7,4)",
+                                "description": "Taxa de Juros da fase de acumula\u00e7\u00e3o",
+                                "size": "7,4",
+                                "nullable": true
+                            },
+                            "forma_pagamento": {
+                                "type": "int",
+                                "description": "Forma de Pagamento do Benef\u00edcio da Indeniza\u00e7\u00e3o",
+                                "size": "1",
+                                "nullable": false
+                            },
+                            "percentual_rendas_rcc_cap": {
+                                "type": "decimal(7,4)",
+                                "description": "Taxa de Juros Rendas",
+                                "size": "7,4",
+                                "nullable": true
+                            },
+                            "atualizacao_indice": {
+                                "type": "int",
+                                "description": "\u00cdndice de Atualiza\u00e7\u00e3o Monet\u00e1ria da Renda",
+                                "size": "2",
+                                "nullable": false
+                            }
+                        }
+                    ],
+                    "description": "Complementar RCC e Capitaliza\u00e7\u00e3o",
+                    "size": "-",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Cobertura de Seguro",
+        "size": "-",
+        "nullable": true
+    },
+    "premio_contribuicao": {
+        "type": {
+            "valor_total_real": {
+                "type": "decimal(18,2)",
+                "description": "Valor Total do Pr\u00eamio/Contribui\u00e7\u00e3o em Reais",
+                "size": "18,2",
+                "nullable": false
+            },
+            "adicional_fracionamento": {
+                "type": "decimal(18,2)",
+                "description": "Valor Total do Adicional de Fracionamento",
+                "size": "18,2",
+                "nullable": false
+            },
+            "valor_carregamento_total": {
+                "type": "decimal(18,2)",
+                "description": "Valor Total do Carregamento",
+                "size": "18,2",
+                "nullable": false
+            },
+            "iof": {
+                "type": "decimal(18,2)",
+                "description": "Valor total do IOF",
+                "size": "18,2",
+                "nullable": false
+            },
+            "numero_parcelas": {
+                "type": "int",
+                "description": "Quantidade de Parcelas de Pr\u00eamio/Contribui\u00e7\u00e3o",
+                "size": "3",
+                "nullable": false
+            },
+            "dados_contrato_coletivo": {
+                "type": {
+                    "tipo_plano": {
+                        "type": "int",
+                        "description": "Tipo do Plano",
+                        "size": "1",
+                        "nullable": false
+                    },
+                    "valor_segurado": {
+                        "type": "decimal(18,2)",
+                        "description": "Valor Relativo ao Segurado em reais",
+                        "size": "18,2",
+                        "nullable": false
+                    },
+                    "valor_estipulante": {
+                        "type": "decimal(18,2)",
+                        "description": "Valor Relativo ao Estipulante em reais",
+                        "size": "18,2",
+                        "nullable": false
+                    }
+                },
+                "description": "Dados do Contrato Coletivo",
+                "size": "-",
+                "nullable": true
+            },
+            "cessionarias_cosseguro": {
+                "type": [
+                    {
+                        "codigo_cosseguradora": {
+                            "type": "string",
+                            "description": "Identifica\u00e7\u00e3o da Cong\u00eanere",
+                            "size": "5",
+                            "nullable": false
+                        },
+                        "percentual_cedido": {
+                            "type": "decimal(7,4)",
+                            "description": "Percentual Cedido em Cosseguro",
+                            "size": "7,4",
+                            "nullable": false
+                        },
+                        "valor_cedido": {
+                            "type": "decimal(18,2)",
+                            "description": "Valor Cedido em Cosseguro",
+                            "size": "18,2",
+                            "nullable": false
+                        }
+                    }
+                ],
+                "description": "Cession\u00e1rias Cosseguro",
+                "size": "-",
+                "nullable": true
+            }
+        },
+        "description": "Pr\u00eamio/Contribui\u00e7\u00e3o Total",
+        "size": "-",
+        "nullable": false
+    },
+    "objeto_garantia_fianca": {
+        "type": [
+            {
+                "id_objeto_garantia_fianca": {
+                    "type": "string",
+                    "description": "Identificador do Objeto Garantia e Fian\u00e7a",
+                    "size": "50",
+                    "nullable": false
+                },
+                "tipo_garantia": {
+                    "type": "int",
+                    "description": "Tipo do Objeto do Seguro Garantia",
+                    "size": "2",
+                    "nullable": true
+                },
+                "descricao_tipo_garantia": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o do Tipo do Objeto Segurado Garantia",
+                    "size": "500",
+                    "nullable": true
+                },
+                "tipo_fianca": {
+                    "type": "int",
+                    "description": "Tipo do Objeto do Seguro Fian\u00e7a Locat\u00edcia",
+                    "size": "2",
+                    "nullable": true
+                },
+                "descricao_tipo_fianca": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o do Tipo do Objeto Segurado Fian\u00e7a Locat\u00edcia",
+                    "size": "500",
+                    "nullable": true
+                },
+                "descricao_objeto": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o do Objeto Segurado",
+                    "size": "500",
+                    "nullable": false
+                },
+                "valor_real": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor do Objeto Segurado em Reais",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "data_inicio": {
+                    "type": "date",
+                    "description": "Data de In\u00edcio do Objeto Segurado",
+                    "size": "10",
+                    "nullable": false
+                },
+                "data_termino": {
+                    "type": "date",
+                    "description": "Data de Fim do Objeto Segurado",
+                    "size": "10",
+                    "nullable": false
+                },
+                "possui_ccg": {
+                    "type": "boolean",
+                    "description": "Possui Contrato de Contragarantia (CCG)?",
+                    "size": "-",
+                    "nullable": false
+                },
+                "data_aviso_expectativa": {
+                    "type": "date",
+                    "description": "Data do aviso \u00e0 Seguradora da expectativa do sinistro",
+                    "size": "10",
+                    "nullable": false
+                },
+                "status_expectativa_sinistro": {
+                    "type": "int",
+                    "description": "Status do aviso de expectativa do sinistro",
+                    "size": "1",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Objeto Seguro Garantia e Fian\u00e7a Locat\u00edcia",
+        "size": "-",
+        "nullable": true
+    },
+    "objeto_maritimo": {
+        "type": [
+            {
+                "identificador_objeto_maritimo": {
+                    "type": "string",
+                    "description": "Identificador da Embarca\u00e7\u00e3o",
+                    "size": "50",
+                    "nullable": false
+                },
+                "tipo_embarcacao": {
+                    "type": "int",
+                    "description": "Tipo de embarca\u00e7\u00e3o",
+                    "size": "2",
+                    "nullable": false
+                },
+                "descricao_embarcacao": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o do tipo de embarca\u00e7\u00e3o",
+                    "size": "500",
+                    "nullable": true
+                },
+                "registro_embarcacao": {
+                    "type": "string",
+                    "description": "Registro da embarca\u00e7\u00e3o",
+                    "size": "500",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Objeto Mar\u00edtimo",
+        "size": "-",
+        "nullable": true
+    },
+    "objeto_aeronautico": {
+        "type": [
+            {
+                "identificador_objeto_aeronave": {
+                    "type": "string",
+                    "description": "Identifica\u00e7\u00e3o da aeronave",
+                    "size": "6",
+                    "nullable": false
+                },
+                "natureza_operacao_aeronave": {
+                    "type": "int",
+                    "description": "Natureza espec\u00edfica da opera\u00e7\u00e3o da aeronave",
+                    "size": "2",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Objeto Aeron\u00e1utico",
+        "size": "-",
+        "nullable": true
+    },
+    "exterior": {
+        "type": [
+            {
+                "identificador_exterior": {
+                    "type": "string",
+                    "description": "Identificador Aceita\u00e7\u00e3o e Sucursal no Exterior",
+                    "size": "50",
+                    "nullable": false
+                },
+                "pais_origem_risco": {
+                    "type": "string",
+                    "description": "Pais de origem do risco",
+                    "size": "3",
+                    "nullable": false
+                },
+                "grupo_ramo": {
+                    "type": "string",
+                    "description": "Grupo e ramo correlato",
+                    "size": "4",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Aceita\u00e7\u00e3o do Exterior e Sucursal no Exterior",
+        "size": "-",
+        "nullable": true
+    },
+    "objeto_rural": {
+        "type": [
+            {
+                "identificador_objeto_rural": {
+                    "type": "string",
+                    "description": "Identificador do Objeto Rural",
+                    "size": "50",
+                    "nullable": false
+                },
+                "possui_fesr": {
+                    "type": "boolean",
+                    "description": "Possui participa\u00e7\u00e3o no FESR?",
+                    "size": "-",
+                    "nullable": false
+                },
+                "valor_premio_subvencionado": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor do pr\u00eamio subvencionado",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "origem_subvencao": {
+                    "type": "string",
+                    "description": "Origem da subven\u00e7\u00e3o",
+                    "size": "2",
+                    "nullable": false
+                },
+                "area_segurada_total": {
+                    "type": "decimal(18,2)",
+                    "description": "\u00c1rea Segurada Total",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "unidade_medida_area_segurada": {
+                    "type": "int",
+                    "description": "Unidade de medida da \u00e1rea segurada",
+                    "size": "1",
+                    "nullable": false
+                },
+                "codigo_cultura": {
+                    "type": "string",
+                    "description": "C\u00f3digo Cultura",
+                    "size": "8",
+                    "nullable": false
+                },
+                "codigo_bem": {
+                    "type": "int",
+                    "description": "C\u00f3digo do Bem ",
+                    "size": "2",
+                    "nullable": false
+                },
+                "codigo_rebanho": {
+                    "type": "int",
+                    "description": "C\u00f3digo Rebanhos",
+                    "size": "2",
+                    "nullable": true
+                },
+                "codigo_floresta": {
+                    "type": "int",
+                    "description": "C\u00f3digo Florestas",
+                    "size": "2",
+                    "nullable": true
+                },
+                "municipio_rural": {
+                    "type": "int",
+                    "description": "Munic\u00edpio",
+                    "size": "7",
+                    "nullable": false
+                },
+                "uf": {
+                    "type": "string",
+                    "description": "UF do estabelecimento rural",
+                    "size": "2",
+                    "nullable": false
+                },
+                "percentual_despesas_administrativas": {
+                    "type": "decimal(7,4)",
+                    "description": "Percentual de Despesas Administrativas",
+                    "size": "7,4",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Objeto Rural",
+        "size": "-",
+        "nullable": true
+    },
+    "objeto_responsabilidades": {
+        "type": [
+            {
+                "identificador_objeto_responsabilidades": {
+                    "type": "string",
+                    "description": "Identificador do Objeto Responsabilidades",
+                    "size": "50",
+                    "nullable": false
+                },
+                "classe_profissional": {
+                    "type": "int",
+                    "description": "Classe profissional",
+                    "size": "2",
+                    "nullable": true
+                },
+                "possui_retroatividade": {
+                    "type": "boolean",
+                    "description": "Possui retroatividade?",
+                    "size": "-",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Objeto Responsabilidades",
+        "size": "-",
+        "nullable": true
+    },
+    "objeto_patrimonial": {
+        "type": [
+            {
+                "identificador_objeto_patrimonial": {
+                    "type": "string",
+                    "description": "Identificador do Objeto Patrimonial",
+                    "size": "50",
+                    "nullable": false
+                },
+                "tipo_imovel_segurado": {
+                    "type": "int",
+                    "description": "Tipo do im\u00f3vel ou condom\u00ednio segurado",
+                    "size": "3",
+                    "nullable": false
+                },
+                "tipo_estruturacao_condominio": {
+                    "type": "int",
+                    "description": "Tipo de estrutura\u00e7\u00e3o para Compreensivo Condom\u00ednio",
+                    "size": "1",
+                    "nullable": true
+                },
+                "cobertura_basica": {
+                    "type": "int",
+                    "description": "Indicador de Cobertura B\u00e1sica",
+                    "size": "1",
+                    "nullable": false
+                },
+                "uf": {
+                    "type": "string",
+                    "description": "UF da unidade segurada",
+                    "size": "2",
+                    "nullable": false
+                },
+                "codigo_postal": {
+                    "type": "string",
+                    "description": "C\u00f3digo postal do im\u00f3vel, condom\u00ednio ou unidade",
+                    "size": "8",
+                    "nullable": true
+                },
+                "codigo_cnae": {
+                    "type": "string",
+                    "description": "C\u00f3digo CNAE",
+                    "size": "7",
+                    "nullable": true
+                },
+                "quantidade_unidades_estado": {
+                    "type": "int",
+                    "description": "Quantidade de unidades empresarias/plantas seguradas por Estado",
+                    "size": "4",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Objeto Patrimonial",
+        "size": "-",
+        "nullable": true
+    },
+    "automovel": {
+        "type": {
+            "rede_reparacao": {
+                "type": "int",
+                "description": "Rede de repara\u00e7\u00e3o dos ve\u00edculos",
+                "size": "2",
+                "nullable": true
+            },
+            "tipo_pecas": {
+                "type": "int",
+                "description": "Tipos de pe\u00e7as pass\u00edveis de uso em reparos",
+                "size": "1",
+                "nullable": true
+            },
+            "classificacao_pecas": {
+                "type": "int",
+                "description": "Classifica\u00e7\u00e3o das pe\u00e7as pass\u00edveis de uso em reparos",
+                "size": "1",
+                "nullable": true
+            },
+            "nacionalidade_pecas": {
+                "type": "int",
+                "description": "Nacionalidade das pe\u00e7as pass\u00edveis de uso em reparos",
+                "size": "1",
+                "nullable": true
+            },
+            "tipo_vigencia": {
+                "type": "int",
+                "description": "Tipo de vig\u00eancia",
+                "size": "2",
+                "nullable": false
+            },
+            "tipo_indenizacao": {
+                "type": "int",
+                "description": "Tipo de indeniza\u00e7\u00e3o por cobertura contratada",
+                "size": "2",
+                "nullable": true
+            },
+            "percentual_indenizacao_parcial": {
+                "type": "decimal(7,4)",
+                "description": "Percentual por indeniza\u00e7\u00e3o parcial",
+                "size": "7,4",
+                "nullable": true
+            },
+            "percentual_lmi": {
+                "type": "decimal(7,4)",
+                "description": "Percentual aplicado sobre o LMI",
+                "size": "7,4",
+                "nullable": true
+            },
+            "dias_cobertura": {
+                "type": "string",
+                "description": "N\u00famero de dias de cobertura para direito \u00e0 indeniza\u00e7\u00e3o",
+                "size": "4",
+                "nullable": true
+            },
+            "cobertura_vinculada": {
+                "type": "int",
+                "description": "Cobertura vinculada",
+                "size": "2",
+                "nullable": true
+            }
+        },
+        "description": "Autom\u00f3vel",
+        "size": "-",
+        "nullable": true
+    },
+    "objeto_auto": {
+        "type": [
+            {
+                "identificador_objeto_auto": {
+                    "type": "string",
+                    "description": "Identificador do Objeto Autom\u00f3vel",
+                    "size": "50",
+                    "nullable": false
+                },
+                "tipo": {
+                    "type": "int",
+                    "description": "Tipo do Objeto Segurado",
+                    "size": "1",
+                    "nullable": false
+                },
+                "tipo_prod": {
+                    "type": "int",
+                    "description": "Tipo do Produto",
+                    "size": "1",
+                    "nullable": false
+                },
+                "modalidade_casco": {
+                    "type": "int",
+                    "description": "Modalidade",
+                    "size": "1",
+                    "nullable": true
+                },
+                "descricao_modalidade_casco": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o da Modalidade",
+                    "size": "500",
+                    "nullable": true
+                },
+                "percentual_tabela_referencia": {
+                    "type": "decimal(7,4)",
+                    "description": "Percentual de ajuste aplicado \u00e0 tabela de refer\u00eancia",
+                    "size": "7,4",
+                    "nullable": true
+                },
+                "tabela_valor_medio": {
+                    "type": "int",
+                    "description": "Tabela utilizada para valor m\u00e9dio de mercado",
+                    "size": "2",
+                    "nullable": true
+                },
+                "codigo_modelo": {
+                    "type": "string",
+                    "description": "C\u00f3digo do modelo",
+                    "size": "10",
+                    "nullable": false
+                },
+                "ano_modelo": {
+                    "type": "int",
+                    "description": "Ano do modelo",
+                    "size": "4",
+                    "nullable": false
+                },
+                "categoria_tarifaria": {
+                    "type": "string",
+                    "description": "Categoria tarif\u00e1ria",
+                    "size": "3",
+                    "nullable": false
+                },
+                "is_casco": {
+                    "type": "decimal(18,2)",
+                    "description": "IS Casco",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "is_rcfv_dm": {
+                    "type": "decimal(18,2)",
+                    "description": "IS RCFV Danos Materiais",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "is_rcfv_dc": {
+                    "type": "decimal(18,2)",
+                    "description": "IS RCFV Danos Corporais",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "is_rcfv_dmorais": {
+                    "type": "decimal(18,2)",
+                    "description": "IS Danos Morais",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "is_app_ma": {
+                    "type": "decimal(18,2)",
+                    "description": "IS APP Morte Acidental",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "is_app_ipa": {
+                    "type": "decimal(18,2)",
+                    "description": "IS APP Invalidez Permanente por Acidente",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "is_app_dmh": {
+                    "type": "decimal(18,2)",
+                    "description": "IS APP Desp Medicas Hospitalares",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "pr_casco": {
+                    "type": "decimal(18,2)",
+                    "description": "Pr\u00eamio Casco",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "pr_rcfv_dm": {
+                    "type": "decimal(18,2)",
+                    "description": "Pr\u00eamio RCFV Danos Materiais",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "pr_rcfv_dc": {
+                    "type": "decimal(18,2)",
+                    "description": "Pr\u00eamio RCFV Danos Corporais",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "pr_rcfv_dmorais": {
+                    "type": "decimal(18,2)",
+                    "description": "Pr\u00eamio Danos Morais",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "pr_app_ma": {
+                    "type": "decimal(18,2)",
+                    "description": "Pr\u00eamio APP Morte Acidental",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "pr_app_ipa": {
+                    "type": "decimal(18,2)",
+                    "description": "Pr\u00eamio APP Invalidez Permanente por Acidente",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "pr_app_dmh": {
+                    "type": "decimal(18,2)",
+                    "description": "Pr\u00eamio APP Desp Medicas Hospitalares",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "pr_outros": {
+                    "type": "decimal(18,2)",
+                    "description": "Pr\u00eamio Outros",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "cep_risco": {
+                    "type": "string",
+                    "description": "CEP de risco",
+                    "size": "8",
+                    "nullable": false
+                },
+                "municipio_risco": {
+                    "type": "int",
+                    "description": "Munic\u00edpio do risco",
+                    "size": "7",
+                    "nullable": false
+                },
+                "uf": {
+                    "type": "string",
+                    "description": "UF do risco",
+                    "size": "2",
+                    "nullable": false
+                },
+                "codigo_utilizacao": {
+                    "type": "int",
+                    "description": "C\u00f3digo de utiliza\u00e7\u00e3o do ve\u00edculo",
+                    "size": "2",
+                    "nullable": false
+                },
+                "cep_localidade_destino": {
+                    "type": "string",
+                    "description": "CEP da localidade de destino frequente do ve\u00edculo",
+                    "size": "8",
+                    "nullable": false
+                },
+                "cep_localidade_pernoite": {
+                    "type": "string",
+                    "description": "CEP da localidade de pernoite do ve\u00edculo",
+                    "size": "8",
+                    "nullable": false
+                },
+                "percentual_desconto_bonus": {
+                    "type": "decimal(7,4)",
+                    "description": "Percentual de desconto por b\u00f4nus",
+                    "size": "7,4",
+                    "nullable": false
+                },
+                "classe_bonus": {
+                    "type": "int",
+                    "description": "Classe de b\u00f4nus",
+                    "size": "2",
+                    "nullable": false
+                },
+                "pessoas_auto": {
+                    "type": [
+                        {
+                            "codigo_condutor": {
+                                "type": "string",
+                                "description": "Documento de identifica\u00e7\u00e3o do Condutor",
+                                "size": "11",
+                                "nullable": false
+                            },
+                            "sexo": {
+                                "type": "int",
+                                "description": "Sexo do condutor",
+                                "size": "2",
+                                "nullable": false
+                            },
+                            "data_nascimento": {
+                                "type": "date",
+                                "description": "Data de nascimento do condutor",
+                                "size": "10",
+                                "nullable": false
+                            },
+                            "tempo_habilitacao": {
+                                "type": "int",
+                                "description": "Tempo de habilita\u00e7\u00e3o do condutor",
+                                "size": "3",
+                                "nullable": false
+                            }
+                        }
+                    ],
+                    "description": "Pessoas associadas - Condutor",
+                    "size": "-",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Objeto Autom\u00f3vel",
+        "size": "-",
+        "nullable": true
+    },
+    "objeto_habitacional": {
+        "type": [
+            {
+                "documento": {
+                    "type": "string",
+                    "description": "Documento de identifica\u00e7\u00e3o do Financiador",
+                    "size": "14",
+                    "nullable": false
+                },
+                "nome": {
+                    "type": "string",
+                    "description": "Raz\u00e3o Social do Financiador",
+                    "size": "144",
+                    "nullable": false
+                },
+                "indice_atualizacao_contrato": {
+                    "type": "int",
+                    "description": "\u00cdndice de Atualiza\u00e7\u00e3o do Contrato",
+                    "size": "2",
+                    "nullable": false
+                },
+                "descricao_indice_contrato": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o do \u00edndice de atualiza\u00e7\u00e3o do contrato",
+                    "size": "500",
+                    "nullable": true
+                },
+                "percentual_juros_anual": {
+                    "type": "decimal(7,4)",
+                    "description": "Taxa de Juros Anual",
+                    "size": "7,4",
+                    "nullable": false
+                },
+                "percentual_custo_efetivo": {
+                    "type": "decimal(7,4)",
+                    "description": "Taxa do Custo Efetivo",
+                    "size": "7,4",
+                    "nullable": false
+                },
+                "tipo_imovel_financiado": {
+                    "type": "int",
+                    "description": "Tipo do im\u00f3vel financiado",
+                    "size": "2",
+                    "nullable": false
+                },
+                "codigo_postal": {
+                    "type": "string",
+                    "description": "C\u00f3digo postal do im\u00f3vel financiado",
+                    "size": "8",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Objeto Habitacional",
+        "size": "-",
+        "nullable": true
+    },
+    "cobertura_risco_previdencia": {
+        "type": [
+            {
+                "cod_cobertura_prev_risco": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Cobertura",
+                    "size": "5",
+                    "nullable": false
+                },
+                "outras_descricao": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o / Nome da Cobertura",
+                    "size": "500",
+                    "nullable": true
+                },
+                "cobertura_codigo_interno": {
+                    "type": "string",
+                    "description": "C\u00f3digo Interno da Cobertura da Seguradora",
+                    "size": "50",
+                    "nullable": false
+                },
+                "cobertura_nome_interno": {
+                    "type": "string",
+                    "description": "Nome da Cobertura",
+                    "size": "500",
+                    "nullable": false
+                },
+                "numero_processo": {
+                    "type": "string",
+                    "description": "N\u00famero do Processo Susep ",
+                    "size": "20",
+                    "nullable": false
+                },
+                "estruturacao_modalidade": {
+                    "type": "int",
+                    "description": "Modalidade de estrutura\u00e7\u00e3o",
+                    "size": "1",
+                    "nullable": false
+                },
+                "beneficio_valor_reais": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor do Benef\u00edcio em Reais",
+                    "size": "18,2",
+                    "nullable": true
+                },
+                "regime_financeiro": {
+                    "type": "int",
+                    "description": "Regime Financeiro",
+                    "size": "1",
+                    "nullable": false
+                },
+                "forma_pagamento": {
+                    "type": "int",
+                    "description": "Forma de Pagamento do Benef\u00edcio",
+                    "size": "1",
+                    "nullable": false
+                },
+                "tabua_tipo": {
+                    "type": "int",
+                    "description": "Tipo de T\u00e1bua",
+                    "size": "1",
+                    "nullable": false
+                },
+                "tabua_biometrica": {
+                    "type": "int",
+                    "description": "T\u00e1bua Biom\u00e9trica",
+                    "size": "2",
+                    "nullable": false
+                },
+                "percentual_taxa_garantida": {
+                    "type": "decimal(7,4)",
+                    "description": "Taxa de Juros Garantida",
+                    "size": "7,4",
+                    "nullable": true
+                },
+                "percentual_juros_acum": {
+                    "type": "decimal(7,4)",
+                    "description": "Taxa de Juros Rendas",
+                    "size": "7,4",
+                    "nullable": true
+                },
+                "forma_tarifacao": {
+                    "type": "int",
+                    "description": "Forma de Tarifa\u00e7\u00e3o",
+                    "size": "2",
+                    "nullable": false
+                },
+                "forma_tarifacao_descricao": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o da forma de tarifa\u00e7\u00e3o",
+                    "size": "500",
+                    "nullable": true
+                },
+                "indice_atualizacao": {
+                    "type": "int",
+                    "description": "\u00cdndice de Atualiza\u00e7\u00e3o dos valores de contribui\u00e7\u00e3o/benef\u00edcio",
+                    "size": "2",
+                    "nullable": false
+                },
+                "indice_descricao": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o do \u00edndice de atualiza\u00e7\u00e3o",
+                    "size": "500",
+                    "nullable": true
+                },
+                "periodicidade_contribuicao": {
+                    "type": "int",
+                    "description": "Periodicidade da Contribui\u00e7\u00e3o",
+                    "size": "2",
+                    "nullable": false
+                },
+                "data_inicio_cobertura": {
+                    "type": "date",
+                    "description": "Data de In\u00edcio de Vig\u00eancia da Cobertura",
+                    "size": "10",
+                    "nullable": false
+                },
+                "data_termino_cobertura": {
+                    "type": "date",
+                    "description": "Data de Fim de Vig\u00eancia da Cobertura",
+                    "size": "10",
+                    "nullable": false
+                },
+                "valor_contribuicao_real": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor de Contribui\u00e7\u00e3o da Cobertura em Reais",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "valor_carregamento": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor do Carregamento",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "possui_carencia_prev": {
+                    "type": "boolean",
+                    "description": "Possui car\u00eancia para recebimento do benef\u00edcio?",
+                    "size": "-",
+                    "nullable": false
+                },
+                "carencia_prev": {
+                    "type": [
+                        {
+                            "identificador_carencia_prev": {
+                                "type": "string",
+                                "description": "Identifica\u00e7\u00e3o da Car\u00eancia",
+                                "size": "50",
+                                "nullable": false
+                            },
+                            "carencia_periodo_prev": {
+                                "type": "int",
+                                "description": "Per\u00edodo de Car\u00eancia",
+                                "size": "5",
+                                "nullable": false
+                            },
+                            "carencia_periodicidade_prev": {
+                                "type": "int",
+                                "description": "Periodicidade da Car\u00eancia",
+                                "size": "1",
+                                "nullable": false
+                            },
+                            "carencia_periodicidade_dias_prev": {
+                                "type": "int",
+                                "description": "Indicador de Dias \u00dateis ou Corridos",
+                                "size": "1",
+                                "nullable": false
+                            },
+                            "carencia_descricao_prev": {
+                                "type": "string",
+                                "description": "Descri\u00e7\u00e3o da car\u00eancia de previd\u00eancia",
+                                "size": "50",
+                                "nullable": false
+                            }
+                        }
+                    ],
+                    "description": "Car\u00eancia Previd\u00eancia (Risco)",
+                    "size": "-",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Cobertura Previd\u00eancia (Riscos)",
+        "size": "-",
+        "nullable": true
+    },
+    "cobertura_sobrevivencia": {
+        "type": [
+            {
+                "cod_cobertura_sobrevivencia": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Cobertura",
+                    "size": "5",
+                    "nullable": false
+                },
+                "outras_descricao": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o / Nome da Cobertura",
+                    "size": "500",
+                    "nullable": true
+                },
+                "cobertura_interna_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo Interno da Cobertura da Seguradora",
+                    "size": "50",
+                    "nullable": false
+                },
+                "cobertura_nome_interno": {
+                    "type": "string",
+                    "description": "Nome da Cobertura",
+                    "size": "500",
+                    "nullable": false
+                },
+                "numero_processo": {
+                    "type": "string",
+                    "description": "N\u00famero do Processo Susep ",
+                    "size": "20",
+                    "nullable": false
+                },
+                "data_inicio_cobertura": {
+                    "type": "date",
+                    "description": "Data de In\u00edcio de Vig\u00eancia da Cobertura",
+                    "size": "10",
+                    "nullable": false
+                },
+                "data_termino_cobertura": {
+                    "type": "date",
+                    "description": "Data de Fim de Vig\u00eancia da Cobertura",
+                    "size": "10",
+                    "nullable": false
+                },
+                "beneficio_valor_reais": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor do Benef\u00edcio em Reais",
+                    "size": "18,2",
+                    "nullable": true
+                },
+                "plano_tipo": {
+                    "type": "int",
+                    "description": "Tipo de Plano",
+                    "size": "2",
+                    "nullable": false
+                },
+                "plano_descricao": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o do Tipo de Plano",
+                    "size": "500",
+                    "nullable": true
+                },
+                "estruturacao_modalidade": {
+                    "type": "int",
+                    "description": "Modalidade de estrutura\u00e7\u00e3o",
+                    "size": "1",
+                    "nullable": false
+                },
+                "proponente_qualificado": {
+                    "type": "boolean",
+                    "description": "Proponente qualificado",
+                    "size": "-",
+                    "nullable": false
+                },
+                "tabua_tipo": {
+                    "type": "int",
+                    "description": "Tipo de T\u00e1bua",
+                    "size": "1",
+                    "nullable": false
+                },
+                "tabua_biometrica": {
+                    "type": "int",
+                    "description": "T\u00e1bua Biom\u00e9trica",
+                    "size": "2",
+                    "nullable": true
+                },
+                "forma_pagamento": {
+                    "type": "int",
+                    "description": "Forma de Pagamento do Benef\u00edcio",
+                    "size": "1",
+                    "nullable": false
+                },
+                "percentual_juros_pmbac": {
+                    "type": "decimal(7,4)",
+                    "description": "Taxa de Juros da fase de acumula\u00e7\u00e3o",
+                    "size": "7,4",
+                    "nullable": true
+                },
+                "pmbac_atualizacao_indice": {
+                    "type": "int",
+                    "description": "\u00cdndice de Pre\u00e7os Garantido da Fase de Acumula\u00e7\u00e3o",
+                    "size": "2",
+                    "nullable": true
+                },
+                "indice_atualizacao": {
+                    "type": "int",
+                    "description": "\u00cdndice de Atualiza\u00e7\u00e3o dos valores de contribui\u00e7\u00e3o/pr\u00eamio",
+                    "size": "2",
+                    "nullable": false
+                },
+                "possui_reversao_acum": {
+                    "type": "boolean",
+                    "description": "Possui Revers\u00e3o do Resultado Financeiro (fase de acumula\u00e7\u00e3o)?",
+                    "size": "-",
+                    "nullable": false
+                },
+                "percentual_reversao_acum": {
+                    "type": "decimal(7,4)",
+                    "description": "Percentual de Revers\u00e3o do Resultado Financeiro (fase de acumula\u00e7\u00e3o)",
+                    "size": "7,4",
+                    "nullable": true
+                },
+                "possui_ettj": {
+                    "type": "boolean",
+                    "description": "Possui ETTJ?",
+                    "size": "-",
+                    "nullable": false
+                },
+                "percentual_juros_conc": {
+                    "type": "decimal(7,4)",
+                    "description": "Taxa de Juros para C\u00e1lculo de Renda",
+                    "size": "7,4",
+                    "nullable": true
+                },
+                "atualizacao_indice": {
+                    "type": "int",
+                    "description": "\u00cdndice de Atualiza\u00e7\u00e3o Monet\u00e1ria da Renda",
+                    "size": "2",
+                    "nullable": true
+                },
+                "possui_reversao_conc": {
+                    "type": "boolean",
+                    "description": "Possui Revers\u00e3o do Resultado Financeiro (fase de concess\u00e3o)?",
+                    "size": "-",
+                    "nullable": false
+                },
+                "percentual_reversao_conc": {
+                    "type": "decimal(7,4)",
+                    "description": "Percentual de Revers\u00e3o do Resultado Financeiro (fase de concess\u00e3o)",
+                    "size": "7,4",
+                    "nullable": true
+                },
+                "pdr_vdr_indice": {
+                    "type": "int",
+                    "description": "Ind\u00edce de Garantia M\u00ednimia do PDR ou VDR",
+                    "size": "2",
+                    "nullable": true
+                },
+                "percentual_pdr_vdr": {
+                    "type": "decimal(7,4)",
+                    "description": "Percentual de Garantia M\u00ednima do PDR ou VDR",
+                    "size": "7,4",
+                    "nullable": true
+                },
+                "regime_tributario": {
+                    "type": "int",
+                    "description": "Regime Tribut\u00e1rio",
+                    "size": "1",
+                    "nullable": false
+                },
+                "valor_contribuicao_real": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor de Pr\u00eamio/Contribui\u00e7\u00e3o da Cobertura em Reais",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "valor_carregamento": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor do Carregamento",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "periodicidade_premio_contribuicao": {
+                    "type": "int",
+                    "description": "Periodicidade do Pr\u00eamio/Contribui\u00e7\u00e3o",
+                    "size": "2",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Cobertura Sobreviv\u00eancia",
+        "size": "-",
+        "nullable": true
+    },
+    "averbacao": {
+        "type": [
+            {
+                "modalidade_transporte": {
+                    "type": "int",
+                    "description": "Modalidade Modais de Transporte",
+                    "size": "1",
+                    "nullable": false
+                },
+                "numero_embarques": {
+                    "type": "int",
+                    "description": "N\u00famero de embarques",
+                    "size": "10",
+                    "nullable": false
+                },
+                "grupo_ramo": {
+                    "type": "string",
+                    "description": "Grupo e Ramo da Cobertura",
+                    "size": "4",
+                    "nullable": false
+                },
+                "moeda_averbacoes": {
+                    "type": "string",
+                    "description": "Moeda do Pr\u00eamio",
+                    "size": "3",
+                    "nullable": false
+                },
+                "premio_embarques_reais": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor Total do Pr\u00eamio em reais",
+                    "size": "18,2",
+                    "nullable": false
+                },
+                "importancia_segurada_embarques": {
+                    "type": "decimal(18,2)",
+                    "description": "Import\u00e2ncia Segurada dos embarques",
+                    "size": "18,2",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Endosso Averba\u00e7\u00e3o de Transportes",
+        "size": "-",
+        "nullable": true
+    },
+    "credito_interno_exportacao": {
+        "type": {
+            "valor_ajuste": {
+                "type": "decimal(18,2)",
+                "description": "Valor do Pr\u00eamio Ajuste",
+                "size": "18,2",
+                "nullable": false
+            }
+        },
+        "description": "Pr\u00eamio de Ajuste Cr\u00e9dito Interno e \u00e0 Exporta\u00e7\u00e3o",
+        "size": "-",
+        "nullable": true
+    }
+}
