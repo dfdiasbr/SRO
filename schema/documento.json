@@ -683,7 +683,7 @@
                             "description": "Regime Financeiro",
                             "size": "1",
                             "nullable": false
-                        },        
+                        },
                         "forma_tarifacao": {
                             "type": "int",
                             "description": "Forma de Tarifa\u00e7\u00e3o",
@@ -709,7 +709,7 @@
                                         "type": "string",
                                         "description": "Documento de Identifica\u00e7\u00e3o do Segurado Dependente",
                                         "size": "40",
-                                        "nullable": false
+                                        "nullable": true
                                     },
                                     "tipo_documento": {
                                         "type": "int",
@@ -722,7 +722,7 @@
                                         "description": "Grau de Parentesco",
                                         "size": "2",
                                         "nullable": true
-                                    },                                    
+                                    },
                                     "nome": {
                                         "type": "string",
                                         "description": "Nome ou Raz\u00e3o Social da Pessoa Associada",
@@ -983,7 +983,7 @@
                 "descricao_objeto": {
                     "type": "string",
                     "description": "Descri\u00e7\u00e3o do Objeto Segurado",
-                    "size": "500",
+                    "size": "1024",
                     "nullable": false
                 },
                 "valor_real": {
@@ -1128,25 +1128,25 @@
                     "type": "decimal(18,2)",
                     "description": "\u00c1rea Segurada Total",
                     "size": "18,2",
-                    "nullable": false
+                    "nullable": true
                 },
                 "unidade_medida_area_segurada": {
                     "type": "int",
                     "description": "Unidade de medida da \u00e1rea segurada",
                     "size": "1",
-                    "nullable": false
+                    "nullable": true
                 },
                 "codigo_cultura": {
                     "type": "string",
                     "description": "C\u00f3digo Cultura",
                     "size": "8",
-                    "nullable": false
+                    "nullable": true
                 },
                 "codigo_bem": {
                     "type": "int",
                     "description": "C\u00f3digo do Bem ",
                     "size": "2",
-                    "nullable": false
+                    "nullable": true
                 },
                 "codigo_rebanho": {
                     "type": "int",
@@ -1164,13 +1164,13 @@
                     "type": "int",
                     "description": "Munic\u00edpio",
                     "size": "7",
-                    "nullable": false
+                    "nullable": true
                 },
                 "uf": {
                     "type": "string",
                     "description": "UF do estabelecimento rural",
                     "size": "2",
-                    "nullable": false
+                    "nullable": true
                 },
                 "percentual_despesas_administrativas": {
                     "type": "decimal(7,4)",
@@ -1236,7 +1236,7 @@
                     "type": "int",
                     "description": "Indicador de Cobertura B\u00e1sica",
                     "size": "1",
-                    "nullable": false
+                    "nullable": true
                 },
                 "uf": {
                     "type": "string",

@@ -578,6 +578,12 @@
                     "size": "2",
                     "nullable": true
                 },
+                "valor_ajuste_credito": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor do Prêmio Ajuste",
+                    "size": "18,2",
+                    "nullable": true
+                },
                 "possui_carencia": {
                     "type": "boolean",
                     "description": "Possui car\u00eancia?",
@@ -1046,7 +1052,7 @@
                 "descricao_objeto": {
                     "type": "string",
                     "description": "Descri\u00e7\u00e3o do Objeto Segurado",
-                    "size": "500",
+                    "size": "1024",
                     "nullable": false
                 },
                 "valor_real": {
@@ -1203,25 +1209,25 @@
                     "type": "decimal(18,2)",
                     "description": "\u00c1rea Segurada Total",
                     "size": "18,2",
-                    "nullable": false
+                    "nullable": true
                 },
                 "unidade_medida_area_segurada": {
                     "type": "int",
                     "description": "Unidade de medida da \u00e1rea segurada",
                     "size": "1",
-                    "nullable": false
+                    "nullable": true
                 },
                 "codigo_cultura": {
                     "type": "string",
                     "description": "C\u00f3digo Cultura",
                     "size": "8",
-                    "nullable": false
+                    "nullable": true
                 },
                 "codigo_bem": {
                     "type": "int",
                     "description": "C\u00f3digo do Bem ",
                     "size": "2",
-                    "nullable": false
+                    "nullable": true
                 },
                 "codigo_rebanho": {
                     "type": "int",
@@ -1239,13 +1245,13 @@
                     "type": "int",
                     "description": "Munic\u00edpio",
                     "size": "7",
-                    "nullable": false
+                    "nullable": true
                 },
                 "uf": {
                     "type": "string",
                     "description": "UF do estabelecimento rural",
                     "size": "2",
-                    "nullable": false
+                    "nullable": true
                 },
                 "percentual_despesas_administrativas": {
                     "type": "decimal(7,4)",
@@ -1311,7 +1317,7 @@
                     "type": "int",
                     "description": "Indicador de Cobertura B\u00e1sica",
                     "size": "1",
-                    "nullable": false
+                    "nullable": true
                 },
                 "uf": {
                     "type": "string",
@@ -2091,6 +2097,12 @@
     "averbacao": {
         "type": [
             {
+                "identificador_averbacao": {
+                    "type": "string",
+                    "description": "Identificador da averbação de transporte",
+                    "size": "50",
+                    "nullable": false
+                },
                 "modalidade_transporte": {
                     "type": "int",
                     "description": "Modalidade Modais de Transporte",
@@ -2130,19 +2142,6 @@
             }
         ],
         "description": "Endosso Averba\u00e7\u00e3o de Transportes",
-        "size": "-",
-        "nullable": true
-    },
-    "credito_interno_exportacao": {
-        "type": {
-            "valor_ajuste": {
-                "type": "decimal(18,2)",
-                "description": "Valor do Pr\u00eamio Ajuste",
-                "size": "18,2",
-                "nullable": false
-            }
-        },
-        "description": "Pr\u00eamio de Ajuste Cr\u00e9dito Interno e \u00e0 Exporta\u00e7\u00e3o",
         "size": "-",
         "nullable": true
     }
