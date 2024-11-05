@@ -971,7 +971,7 @@
                 "descricao_tipo_garantia": {
                     "type": "string",
                     "description": "Descri\u00e7\u00e3o do Tipo do Objeto Segurado Garantia",
-                    "size": "500",
+                    "size": "1024",
                     "nullable": true
                 },
                 "tipo_fianca": {

@@ -1,0 +1,658 @@
+{
+    "uuid": {
+        "type": "string",
+        "description": "Uuid",
+        "size": "36",
+        "nullable": false
+    },
+    "anotacao": {
+        "type": "string",
+        "description": "Anota\u00e7\u00e3o Registro",
+        "size": "500",
+        "nullable": true
+    },
+    "layout": {
+        "type": "string",
+        "description": "Layout",
+        "size": "-",
+        "nullable": false
+    },
+    "codigo_registradora": {
+        "type": "string",
+        "description": "Identifica\u00e7\u00e3o da Registradora",
+        "size": "14",
+        "nullable": false
+    },
+    "data_registro": {
+        "type": "timestamp",
+        "description": "Data do Registro",
+        "size": "-",
+        "nullable": false
+    },
+    "data_alteracao": {
+        "type": "timestamp",
+        "description": "Data da Altera\u00e7\u00e3o do Registro",
+        "size": "-",
+        "nullable": true
+    },
+    "codigo_seguradora": {
+        "type": "string",
+        "description": "C\u00f3digo da Seguradora",
+        "size": "5",
+        "nullable": false
+    },
+    "codigo_sinistro": {
+        "type": "string",
+        "description": "Identificador do Sinistro",
+        "size": "50",
+        "nullable": false
+    },
+    "apolice_codigo": {
+        "type": "string",
+        "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+        "size": "60",
+        "nullable": false
+    },
+    "certificado_codigo": {
+        "type": "string",
+        "description": "Identificador do Certificado",
+        "size": "60",
+        "nullable": true
+    },
+    "tipo_sinistro": {
+        "type": "int",
+        "description": "Tipo de Sinistro",
+        "size": "1",
+        "nullable": false
+    },
+    "moeda": {
+        "type": "string",
+        "description": "Moeda",
+        "size": "3",
+        "nullable": false
+    },
+    "taxa_cambio": {
+        "type": "decimal(10,6)",
+        "description": "Taxa de C\u00e2mbio",
+        "size": "10,6",
+        "nullable": false
+    },
+    "possui_beneficiario_final": {
+        "type": "boolean",
+        "description": "Possui benefici\u00e1rios finais indicados?",
+        "size": "-",
+        "nullable": false
+    },
+    "possui_cosseguro": {
+        "type": "boolean",
+        "description": "Possui cosseguro?",
+        "size": "-",
+        "nullable": false
+    },
+    "possui_resseguro": {
+        "type": "boolean",
+        "description": "Possui contrato de resseguro?",
+        "size": "-",
+        "nullable": false
+    },
+    "retificacao_registro": {
+        "type": "boolean",
+        "description": "Retifica\u00e7\u00e3o de registro?",
+        "size": "-",
+        "nullable": false
+    },
+    "contrato_ress": {
+        "type": [
+            {
+                "numero_contrato": {
+                    "type": "string",
+                    "description": "Identificador do Contrato de Resseguro",
+                    "size": "50",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Contrato de Resseguro",
+        "size": "-",
+        "nullable": true
+    },
+    "coberturas_afetadas": {
+        "type": [
+            {
+                "cobertura_interna_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo Interno da Cobertura da Seguradora",
+                    "size": "50",
+                    "nullable": false
+                },
+                "grupo_ramo": {
+                    "type": "string",
+                    "description": "Grupo e Ramo",
+                    "size": "4",
+                    "nullable": false
+                },
+                "cod_cobertura_sinistro": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Cobertura",
+                    "size": "5",
+                    "nullable": false
+                },
+                "sinistro_cobertura_outros": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o / Nome da Cobertura",
+                    "size": "500",
+                    "nullable": true
+                },
+                "data_aviso_cobertura": {
+                    "type": "date",
+                    "description": "Data de Aviso do Sinistro por Cobertura",
+                    "size": "10",
+                    "nullable": false
+                },
+                "data_registro_seguradora_cobertura": {
+                    "type": "date",
+                    "description": "Data do Registro de Aviso \u00e0 Seguradora por Cobertura",
+                    "size": "10",
+                    "nullable": false
+                },
+                "data_reclamacao_terceiro_cobertura": {
+                    "type": "date",
+                    "description": "Data de Reclama\u00e7\u00e3o do Terceiro por Cobertura",
+                    "size": "10",
+                    "nullable": true
+                },
+                "data_entrega": {
+                    "type": "date",
+                    "description": "Data de Entrega da Documenta\u00e7\u00e3o Completa",
+                    "size": "10",
+                    "nullable": true
+                },
+                "status": {
+                    "type": "int",
+                    "description": "Status do Sinistro",
+                    "size": "1",
+                    "nullable": false
+                },
+                "data_alteracao_status": {
+                    "type": "date",
+                    "description": "Data de Altera\u00e7\u00e3o do Status do Sinistro",
+                    "size": "10",
+                    "nullable": false
+                },
+                "data_ocorrencia": {
+                    "type": "date",
+                    "description": "Data de Ocorr\u00eancia do Sinistro",
+                    "size": "10",
+                    "nullable": false
+                },
+                "forma_indenizacao": {
+                    "type": "int",
+                    "description": "Forma de Pagamento da Indeniza\u00e7\u00e3o",
+                    "size": "2",
+                    "nullable": false
+                },
+                "data_liquidacao": {
+                    "type": "date",
+                    "description": "Data de In\u00edcio da Liquida\u00e7\u00e3o do Sinistro",
+                    "size": "10",
+                    "nullable": true
+                },
+                "data_conclusao": {
+                    "type": "date",
+                    "description": "Data da Conclus\u00e3o do Sinistro",
+                    "size": "10",
+                    "nullable": true
+                },
+                "data_salvado": {
+                    "type": "date",
+                    "description": "Data do salvado",
+                    "size": "10",
+                    "nullable": true
+                },
+                "data_ressarcimento": {
+                    "type": "date",
+                    "description": "Data do ressarcimento",
+                    "size": "10",
+                    "nullable": true
+                },
+                "justificativa_negativa": {
+                    "type": {
+                        "justificativa": {
+                            "type": "int",
+                            "description": "Justificativa da Negativa",
+                            "size": "2",
+                            "nullable": false
+                        },
+                        "descricao_justificativa": {
+                            "type": "string",
+                            "description": "Descri\u00e7\u00e3o da Justificativa da Negativa",
+                            "size": "1024",
+                            "nullable": true
+                        }
+                    },
+                    "description": "Justificativa da Negativa",
+                    "size": "-",
+                    "nullable": true
+                },
+                "totalizacao_sinistro": {
+                    "type": {
+                        "valor_pendente_reais": {
+                            "type": "decimal(18,2)",
+                            "description": "Valor Pendente em Reais",
+                            "size": "18,2",
+                            "nullable": false
+                        },
+                        "valor_pago_reais": {
+                            "type": "decimal(18,2)",
+                            "description": "Valor Pago em Reais",
+                            "size": "18,2",
+                            "nullable": false
+                        },
+                        "valor_salvado": {
+                            "type": "decimal(18,2)",
+                            "description": "Valor do Salvado em Reais",
+                            "size": "18,2",
+                            "nullable": false
+                        },
+                        "valor_ressarcimento": {
+                            "type": "decimal(18,2)",
+                            "description": "Valor do Ressarcimento em Reais",
+                            "size": "18,2",
+                            "nullable": false
+                        },
+                        "valor_despesa": {
+                            "type": "decimal(18,2)",
+                            "description": "Valor da Despesa em Reais",
+                            "size": "18,2",
+                            "nullable": false
+                        },
+                        "valor_desp_fin": {
+                            "type": "decimal(18,2)",
+                            "description": "Valor da Despesa Financeira Adicional",
+                            "size": "18,2",
+                            "nullable": false
+                        },
+                        "cessionarias_cosseguro": {
+                            "type": [
+                                {
+                                    "codigo_cosseguradora": {
+                                        "type": "string",
+                                        "description": "Identifica\u00e7\u00e3o da Cong\u00eanere",
+                                        "size": "5",
+                                        "nullable": false
+                                    },
+                                    "valor_pendente_reais": {
+                                        "type": "decimal(18,2)",
+                                        "description": "Valor Pendente em Reais",
+                                        "size": "18,2",
+                                        "nullable": false
+                                    },
+                                    "valor_pago_reais": {
+                                        "type": "decimal(18,2)",
+                                        "description": "Valor Pago em Reais",
+                                        "size": "18,2",
+                                        "nullable": false
+                                    }
+                                }
+                            ],
+                            "description": "Cession\u00e1rias Cosseguro",
+                            "size": "-",
+                            "nullable": true
+                        }
+                    },
+                    "description": "Totaliza\u00e7\u00e3o do Sinistro/Evento gerador",
+                    "size": "-",
+                    "nullable": false
+                },
+                "info_renda_concedida": {
+                    "type": [
+                        {
+                            "numero_beneficio": {
+                                "type": "string",
+                                "description": "N\u00famero do Benef\u00edcio",
+                                "size": "60",
+                                "nullable": false
+                            },
+                            "documento": {
+                                "type": "string",
+                                "description": "Documento de Identifica\u00e7\u00e3o do Benefici\u00e1rio",
+                                "size": "40",
+                                "nullable": false
+                            },
+                            "beneficiario_tipo_doc": {
+                                "type": "int",
+                                "description": "Tipo de Documento do Benefici\u00e1rio",
+                                "size": "2",
+                                "nullable": false
+                            },
+                            "nome": {
+                                "type": "string",
+                                "description": "Nome do Benefici\u00e1rio ",
+                                "size": "144",
+                                "nullable": false
+                            },
+                            "beneficiario_classificacao": {
+                                "type": "int",
+                                "description": "Classifica\u00e7\u00e3o do Benefici\u00e1rio",
+                                "size": "1",
+                                "nullable": false
+                            },
+                            "evento_gerador": {
+                                "type": "int",
+                                "description": "Evento Gerador",
+                                "size": "2",
+                                "nullable": false
+                            },
+                            "descricao_evento_gerador": {
+                                "type": "string",
+                                "description": "Descri\u00e7\u00e3o evento gerador",
+                                "size": "500",
+                                "nullable": true
+                            },
+                            "renda_tipo": {
+                                "type": "int",
+                                "description": "Tipo de Renda",
+                                "size": "2",
+                                "nullable": false
+                            },
+                            "renda_descricao": {
+                                "type": "string",
+                                "description": "Descri\u00e7\u00e3o do Tipo de Renda",
+                                "size": "500",
+                                "nullable": true
+                            },
+                            "carregamento_resgate": {
+                                "type": "decimal(18,2)",
+                                "description": "Valor do Carregamento ",
+                                "size": "18,2",
+                                "nullable": true
+                            },
+                            "renda_valor_aviso": {
+                                "type": "decimal(18,2)",
+                                "description": "Valor da Renda ou Pgto \u00danico",
+                                "size": "18,2",
+                                "nullable": false
+                            },
+                            "pagamento_prazo": {
+                                "type": "int",
+                                "description": "Prazo de Pagamento",
+                                "size": "5",
+                                "nullable": true
+                            },
+                            "diferimento_data_fim": {
+                                "type": "date",
+                                "description": "Data do fim do per\u00eddo de diferimento",
+                                "size": "10",
+                                "nullable": false
+                            },
+                            "possui_reversao": {
+                                "type": "boolean",
+                                "description": "Possui Revers\u00e3o do Resultado Financeiro?",
+                                "size": "-",
+                                "nullable": false
+                            },
+                            "percentual_reversao": {
+                                "type": "decimal(7,4)",
+                                "description": "Percentual de Revers\u00e3o do Resultado Financeiro",
+                                "size": "7,4",
+                                "nullable": true
+                            },
+                            "tabua_biometrica": {
+                                "type": "int",
+                                "description": "T\u00e1bua Biom\u00e9trica",
+                                "size": "2",
+                                "nullable": true
+                            },
+                            "possui_ettj": {
+                                "type": "boolean",
+                                "description": "Possui ETTJ?",
+                                "size": "-",
+                                "nullable": false
+                            },
+                            "percentual_juros": {
+                                "type": "decimal(7,4)",
+                                "description": "Taxa de Juros",
+                                "size": "7,4",
+                                "nullable": false
+                            },
+                            "atualizacao_indice": {
+                                "type": "int",
+                                "description": "\u00cdndice de Atualiza\u00e7\u00e3o Monet\u00e1ria",
+                                "size": "2",
+                                "nullable": true
+                            },
+                            "regime_tributario": {
+                                "type": "int",
+                                "description": "Regime Tribut\u00e1rio",
+                                "size": "1",
+                                "nullable": true
+                            }
+                        }
+                    ],
+                    "description": "Informa\u00e7\u00f5es de Indeniza\u00e7\u00e3o, Benef\u00edcio ou Renda Concedida",
+                    "size": "-",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Coberturas afetadas",
+        "size": "-",
+        "nullable": false
+    },
+    "dados_rural": {
+        "type": [
+            {
+                "codigo_objeto_rural": {
+                    "type": "string",
+                    "description": "Identificador do Objeto Rural",
+                    "size": "50",
+                    "nullable": false
+                },
+                "data_ocorrencia_inicio": {
+                    "type": "date",
+                    "description": "Data de ocorr\u00eancia in\u00edcio",
+                    "size": "10",
+                    "nullable": true
+                },
+                "data_ocorrencia_fim": {
+                    "type": "date",
+                    "description": "Data de ocorr\u00eancia fim",
+                    "size": "10",
+                    "nullable": true
+                },
+                "data_colheita_inicio": {
+                    "type": "date",
+                    "description": "Data inicial da colheita",
+                    "size": "10",
+                    "nullable": true
+                },
+                "data_colheita_fim": {
+                    "type": "date",
+                    "description": "Data final da colheita",
+                    "size": "10",
+                    "nullable": true
+                },
+                "data_vistoria_inicial": {
+                    "type": "date",
+                    "description": "Data da vistoria inicial",
+                    "size": "10",
+                    "nullable": true
+                },
+                "data_vistoria_final": {
+                    "type": "date",
+                    "description": "Data da vistoria final",
+                    "size": "10",
+                    "nullable": true
+                },
+                "uf": {
+                    "type": "string",
+                    "description": "UF da vistoria",
+                    "size": "2",
+                    "nullable": true
+                },
+                "municipio_sinistro": {
+                    "type": "int",
+                    "description": "Munic\u00edpio da vistoria",
+                    "size": "7",
+                    "nullable": true
+                },
+                "codigo_postal_vistoria": {
+                    "type": "string",
+                    "description": "C\u00f3digo postal da vistoria",
+                    "size": "30",
+                    "nullable": true
+                },
+                "evento_gerador": {
+                    "type": "string",
+                    "description": "Evento gerador",
+                    "size": "2",
+                    "nullable": false
+                },
+                "franquia_rural": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor da Franquia",
+                    "size": "18,2",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Dados Rural",
+        "size": "-",
+        "nullable": true
+    },
+    "dados_patrimonial": {
+        "type": [
+            {
+                "codigo_objeto_patrimonial": {
+                    "type": "string",
+                    "description": "Identificador do Objeto Patrimonial",
+                    "size": "50",
+                    "nullable": false
+                },
+                "franquia_patrimonial": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor da Franquia",
+                    "size": "18,2",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Dados Patrimonial",
+        "size": "-",
+        "nullable": true
+    },
+    "dados_auto": {
+        "type": [
+            {
+                "codigo_objeto_auto": {
+                    "type": "string",
+                    "description": "Identificador do Objeto Autom\u00f3vel",
+                    "size": "50",
+                    "nullable": false
+                },
+                "numero_convenio": {
+                    "type": "string",
+                    "description": "N\u00famero do Conv\u00eanio",
+                    "size": "50",
+                    "nullable": true
+                },
+                "evento_auto": {
+                    "type": "int",
+                    "description": "Evento / Cobertura",
+                    "size": "2",
+                    "nullable": false
+                },
+                "causa_sinistro": {
+                    "type": "int",
+                    "description": "Causa do Sinistro",
+                    "size": "2",
+                    "nullable": true
+                },
+                "sexo": {
+                    "type": "int",
+                    "description": "Sexo do condutor do ve\u00edculo no momento do sinistro",
+                    "size": "2",
+                    "nullable": true
+                },
+                "data_nascimento": {
+                    "type": "date",
+                    "description": "Data de nascimento do condutor do ve\u00edculo no momento do sinistro",
+                    "size": "10",
+                    "nullable": true
+                },
+                "pais_ocorrencia_sinistro": {
+                    "type": "string",
+                    "description": "Pa\u00eds de ocorr\u00eancia do sinistro",
+                    "size": "3",
+                    "nullable": true
+                },
+                "municipio_sinistro": {
+                    "type": "int",
+                    "description": "Munic\u00edpio de ocorr\u00eancia do sinistro",
+                    "size": "7",
+                    "nullable": true
+                },
+                "uf": {
+                    "type": "string",
+                    "description": "UF de ocorr\u00eancia do sinistro",
+                    "size": "2",
+                    "nullable": true
+                },
+                "cep_localidade_sinistro": {
+                    "type": "string",
+                    "description": "CEP da localidade de ocorr\u00eancia do sinistro",
+                    "size": "30",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Dados Autom\u00f3vel",
+        "size": "-",
+        "nullable": true
+    },
+    "beneficiario_final": {
+        "type": [
+            {
+                "documento": {
+                    "type": "string",
+                    "description": "Documento de Identifica\u00e7\u00e3o do Benefici\u00e1rio Final",
+                    "size": "40",
+                    "nullable": false
+                },
+                "tipo_documento": {
+                    "type": "int",
+                    "description": "Tipo de Documento do Benefici\u00e1rio Final",
+                    "size": "2",
+                    "nullable": false
+                },
+                "nome": {
+                    "type": "string",
+                    "description": "Nome do Benefici\u00e1rio Final",
+                    "size": "144",
+                    "nullable": false
+                },
+                "codigo_postal": {
+                    "type": "string",
+                    "description": "C\u00f3digo Postal do Benefici\u00e1rio Final",
+                    "size": "30",
+                    "nullable": false
+                },
+                "uf": {
+                    "type": "string",
+                    "description": "UF do benefici\u00e1rio final",
+                    "size": "2",
+                    "nullable": false
+                },
+                "pais": {
+                    "type": "string",
+                    "description": "Pa\u00eds do Benefici\u00e1rio Final",
+                    "size": "3",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Benefici\u00e1rio Final",
+        "size": "-",
+        "nullable": true
+    }
+}

@@ -90,6 +90,3 @@ for input_file in inputs:
     timestamp = datetime.now().strftime('%Y_%m_%d_%H_%M_%S')
 
     pq.write_table(table, f'output/{layout}/{layout}_{input_file.split(".")[0]}_{timestamp}.parquet')
-
-
-

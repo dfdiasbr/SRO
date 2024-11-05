@@ -1,0 +1,256 @@
+{
+    "uuid": {
+        "type": "string",
+        "description": "Uuid",
+        "size": "36",
+        "nullable": false
+    },
+    "anotacao": {
+        "type": "string",
+        "description": "Anota\u00e7\u00e3o Registro",
+        "size": "500",
+        "nullable": true
+    },
+    "layout": {
+        "type": "string",
+        "description": "Layout",
+        "size": "-",
+        "nullable": false
+    },
+    "codigo_registradora": {
+        "type": "string",
+        "description": "Identifica\u00e7\u00e3o da Registradora",
+        "size": "14",
+        "nullable": false
+    },
+    "data_registro": {
+        "type": "timestamp",
+        "description": "Data do Registro",
+        "size": "-",
+        "nullable": false
+    },
+    "data_alteracao": {
+        "type": "timestamp",
+        "description": "Data da Altera\u00e7\u00e3o do Registro",
+        "size": "-",
+        "nullable": true
+    },
+    "codigo_seguradora": {
+        "type": "string",
+        "description": "C\u00f3digo da Seguradora",
+        "size": "5",
+        "nullable": false
+    },
+    "evento_id": {
+        "type": "string",
+        "description": "Identificador do evento",
+        "size": "80",
+        "nullable": false
+    },
+    "apolice_codigo": {
+        "type": "string",
+        "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+        "size": "60",
+        "nullable": false
+    },
+    "certificado_codigo": {
+        "type": "string",
+        "description": "Identificador do Certificado",
+        "size": "60",
+        "nullable": true
+    },
+    "evento_tipo": {
+        "type": "int",
+        "description": "Tipo de Evento ",
+        "size": "1",
+        "nullable": false
+    },
+    "retificacao_registro": {
+        "type": "boolean",
+        "description": "Retifica\u00e7\u00e3o de registro?",
+        "size": "-",
+        "nullable": false
+    },
+    "portabilidade": {
+        "type": {
+            "portabilidade_fluxo": {
+                "type": "int",
+                "description": "Fluxo da Portabilidade ",
+                "size": "1",
+                "nullable": false
+            },
+            "portabilidade_tipo": {
+                "type": "int",
+                "description": "Tipo de Portabilidade",
+                "size": "1",
+                "nullable": true
+            },
+            "portabilidade_valor": {
+                "type": "decimal(18,2)",
+                "description": "Valor Portado",
+                "size": "18,2",
+                "nullable": false
+            },
+            "portabilidade_solicitacao": {
+                "type": "date",
+                "description": "Data solicita\u00e7\u00e3o",
+                "size": "10",
+                "nullable": false
+            },
+            "portabilidade_liquidacao": {
+                "type": "date",
+                "description": "Data Movimenta\u00e7\u00e3o (liquida\u00e7\u00e3o)",
+                "size": "10",
+                "nullable": false
+            },
+            "portabilidade_regime": {
+                "type": "int",
+                "description": "Regime de Tributa\u00e7\u00e3o",
+                "size": "1",
+                "nullable": true
+            },
+            "portabilidade_carregamento": {
+                "type": "decimal(18,2)",
+                "description": "Valor do Carregamento ",
+                "size": "18,2",
+                "nullable": false
+            },
+            "portabilidade_origem": {
+                "type": "string",
+                "description": "Entidade de Origem ",
+                "size": "5",
+                "nullable": false
+            },
+            "portabilidade_destino": {
+                "type": "string",
+                "description": "Entidade de Destino",
+                "size": "5",
+                "nullable": false
+            },
+            "portabilidade_plan_origem": {
+                "type": "string",
+                "description": "Processo Susep do Plano Origem",
+                "size": "20",
+                "nullable": true
+            },
+            "portabilidade_plan_destino": {
+                "type": "string",
+                "description": "Processo Susep do Plano Destino",
+                "size": "20",
+                "nullable": true
+            },
+            "fie_portado": {
+                "type": [
+                    {
+                        "fie_cnpj": {
+                            "type": "string",
+                            "description": "CNPJ do FIE",
+                            "size": "14",
+                            "nullable": false
+                        },
+                        "tipo_portado": {
+                            "type": "int",
+                            "description": "Tipo Portado",
+                            "size": "1",
+                            "nullable": false
+                        }
+                    }
+                ],
+                "description": "Informa\u00e7\u00f5es do FIE do Valor Portado",
+                "size": "-",
+                "nullable": false
+            }
+        },
+        "description": "Portabilidade",
+        "size": "-",
+        "nullable": true
+    },
+    "resgate": {
+        "type": {
+            "resgate_tipo": {
+                "type": "int",
+                "description": "Tipo de Resgate",
+                "size": "1",
+                "nullable": false
+            },
+            "resgate_solicitacao": {
+                "type": "date",
+                "description": "Data da Solicita\u00e7\u00e3o",
+                "size": "10",
+                "nullable": false
+            },
+            "resgate_valor": {
+                "type": "decimal(18,2)",
+                "description": "Valor do Resgate",
+                "size": "18,2",
+                "nullable": false
+            },
+            "resgate_liquidacao": {
+                "type": "date",
+                "description": "Data Movimenta\u00e7\u00e3o (liquida\u00e7\u00e3o)",
+                "size": "10",
+                "nullable": false
+            },
+            "regime_tributario": {
+                "type": "int",
+                "description": "Regime Tribut\u00e1rio",
+                "size": "1",
+                "nullable": true
+            },
+            "tipo_recebedor": {
+                "type": "int",
+                "description": "Tipo de Recebedor",
+                "size": "1",
+                "nullable": false
+            },
+            "documento": {
+                "type": "string",
+                "description": "Documento de Identifica\u00e7\u00e3o do Recebedor",
+                "size": "40",
+                "nullable": false
+            },
+            "tipo_documento": {
+                "type": "int",
+                "description": "Tipo de Documento do Recebedor",
+                "size": "2",
+                "nullable": false
+            },
+            "nome": {
+                "type": "string",
+                "description": "Nome ou Raz\u00e3o Social do Recebedor",
+                "size": "144",
+                "nullable": false
+            },
+            "resgate_carregamento": {
+                "type": "decimal(18,2)",
+                "description": "Valor do Carregamento ",
+                "size": "18,2",
+                "nullable": false
+            },
+            "resgate_natureza": {
+                "type": "int",
+                "description": "Natureza do Resgate",
+                "size": "1",
+                "nullable": false
+            },
+            "fie_resgatado": {
+                "type": [
+                    {
+                        "fie_cnpj": {
+                            "type": "string",
+                            "description": "CNPJ do FIE",
+                            "size": "14",
+                            "nullable": false
+                        }
+                    }
+                ],
+                "description": "Informa\u00e7\u00f5es do FIE do Valor Resgatado",
+                "size": "-",
+                "nullable": false
+            }
+        },
+        "description": "Resgate",
+        "size": "-",
+        "nullable": true
+    }
+}

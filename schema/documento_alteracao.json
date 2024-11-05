@@ -41,7 +41,37 @@
         "size": "5",
         "nullable": false
     },
-    "tipo_documento_atualizado": {
+    "apolice_codigo": {
+        "type": "string",
+        "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+        "size": "60",
+        "nullable": false
+    },
+    "certificado_codigo": {
+        "type": "string",
+        "description": "Identificador do Certificado",
+        "size": "60",
+        "nullable": true
+    },
+    "alteracao_sequencial": {
+        "type": "int",
+        "description": "Numera\u00e7\u00e3o sequencial da altera\u00e7\u00e3o",
+        "size": "6",
+        "nullable": false
+    },
+    "numero_susep_apolice": {
+        "type": "string",
+        "description": "N\u00famero Susep da Ap\u00f3lice",
+        "size": "24",
+        "nullable": true
+    },
+    "alteracao_codigo": {
+        "type": "string",
+        "description": "Identificador da Altera\u00e7\u00e3o do Documento",
+        "size": "60",
+        "nullable": false
+    },
+    "tipo_documento_emitido": {
         "type": "int",
         "description": "Tipo de Documento Emitido",
         "size": "2",
@@ -51,30 +81,6 @@
         "type": "int",
         "description": "Natureza do documento",
         "size": "1",
-        "nullable": false
-    },
-    "apolice_codigo": {
-        "type": "string",
-        "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
-        "size": "60",
-        "nullable": false
-    },
-    "numero_susep_apolice": {
-        "type": "string",
-        "description": "N\u00famero Susep da Ap\u00f3lice",
-        "size": "24",
-        "nullable": true
-    },
-    "certificado_codigo": {
-        "type": "string",
-        "description": "Identificador do Certificado",
-        "size": "60",
-        "nullable": true
-    },
-    "alteracao_codigo": {
-        "type": "string",
-        "description": "Identificador da Altera\u00e7\u00e3o do Documento",
-        "size": "60",
         "nullable": false
     },
     "alteracao_descricao": {
@@ -179,13 +185,19 @@
         "size": "-",
         "nullable": false
     },
+    "retificacao_registro": {
+        "type": "boolean",
+        "description": "Retifica\u00e7\u00e3o de registro?",
+        "size": "-",
+        "nullable": false
+    },
     "alteracao_associada": {
         "type": [
             {
-                "alteracao_associada_codigo": {
-                    "type": "string",
-                    "description": "Identificador da Altera\u00e7\u00e3o Associada",
-                    "size": "60",
+                "alteracao_associada_sequencial": {
+                    "type": "int",
+                    "description": "Identificador da Numeração Sequencial da Alteração Associada",
+                    "size": "6",
                     "nullable": false
                 }
             }
@@ -1034,7 +1046,7 @@
                 "descricao_tipo_garantia": {
                     "type": "string",
                     "description": "Descri\u00e7\u00e3o do Tipo do Objeto Segurado Garantia",
-                    "size": "500",
+                    "size": "1024",
                     "nullable": true
                 },
                 "tipo_fianca": {
@@ -2112,7 +2124,7 @@
                 "numero_embarques": {
                     "type": "int",
                     "description": "N\u00famero de embarques",
-                    "size": "10",
+                    "size": "9",
                     "nullable": false
                 },
                 "grupo_ramo": {

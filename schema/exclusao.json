@@ -1,0 +1,692 @@
+{            
+    "uuid": {
+        "type": "string",
+        "description": "Uuid",
+        "size": "36",
+        "nullable": false
+    },
+    "anotacao": {
+        "type": "string",
+        "description": "Anota\u00e7\u00e3o Registro",
+        "size": "500",
+        "nullable": true
+    },
+    "layout": {
+        "type": "string",
+        "description": "Layout",
+        "size": "-",
+        "nullable": false
+    },
+    "codigo_registradora": {
+        "type": "string",
+        "description": "Identifica\u00e7\u00e3o da Registradora",
+        "size": "14",
+        "nullable": false
+    },
+    "uuid_excluido": {
+        "type": "string",
+        "description": "Uuid Registro Exclu\u00eddo",
+        "size": "36",
+        "nullable": false
+    },
+    "operacao_exclusao": {
+        "type": "int",
+        "description": "Opera\u00e7\u00e3o de exclus\u00e3o",
+        "size": "2",
+        "nullable": false
+    },
+    "motivo_exclusao": {
+        "type": "int",
+        "description": "Motivo",
+        "size": "2",
+        "nullable": false
+    },
+    "descricao_motivo": {
+        "type": "string",
+        "description": "Descri\u00e7\u00e3o do Motivo",
+        "size": "500",
+        "nullable": false
+    },
+    "data_exclusao": {
+        "type": "timestamp",
+        "description": "Data de Exclus\u00e3o",
+        "size": "-",
+        "nullable": false            
+    },
+    "documento": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "apolice_codigo": {
+                    "type": "string",
+                    "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+                    "size": "60",
+                    "nullable": false
+                },
+                "certificado_codigo": {
+                    "type": "string",
+                    "description": "Identificador do Certificado",
+                    "size": "60",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Documento",
+        "size": "-",
+        "nullable": true
+    },
+    "documento_alteracao": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "apolice_codigo": {
+                    "type": "string",
+                    "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+                    "size": "60",
+                    "nullable": false
+                },
+                "certificado_codigo": {
+                    "type": "string",
+                    "description": "Identificador do Certificado",
+                    "size": "60",
+                    "nullable": true
+                },
+                "alteracao_sequencial": {
+                    "type": "int",
+                    "description": "Numera\u00e7\u00e3o sequencial da altera\u00e7\u00e3o",
+                    "size": "6",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Documento altera\u00e7\u00e3o",
+        "size": "-",
+        "nullable": true
+    },
+    "sinistro_evento_gerador": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "codigo_sinistro": {
+                    "type": "string",
+                    "description": "Identificador do Sinistro",
+                    "size": "50",
+                    "nullable": false
+                },
+                "apolice_codigo": {
+                    "type": "string",
+                    "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+                    "size": "60",
+                    "nullable": false
+                },
+                "certificado_codigo": {
+                    "type": "string",
+                    "description": "Identificador do Certificado",
+                    "size": "60",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Sinistro",
+        "size": "-",
+        "nullable": true
+    },
+    "sinistro_alteracao": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "codigo_sinistro": {
+                    "type": "string",
+                    "description": "Identificador do Sinistro",
+                    "size": "50",
+                    "nullable": false
+                },
+                "alteracao_sinistro_codigo": {
+                    "type": "string",
+                    "description": "Identificador da Altera\u00e7\u00e3o do Sinistro",
+                    "size": "60",
+                    "nullable": false
+                },
+                "apolice_codigo": {
+                    "type": "string",
+                    "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+                    "size": "60",
+                    "nullable": false
+                },
+                "certificado_codigo": {
+                    "type": "string",
+                    "description": "Identificador do Certificado",
+                    "size": "60",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Sinistro altera\u00e7\u00e3o",
+        "size": "-",
+        "nullable": true
+    },
+    "fie_provisao": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "identificador_fie": {
+                    "type": "string",
+                    "description": "Identificador do FIE",
+                    "size": "80",
+                    "nullable": false
+                },
+                "apolice_codigo": {
+                    "type": "string",
+                    "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+                    "size": "60",
+                    "nullable": false
+                },
+                "certificado_codigo": {
+                    "type": "string",
+                    "description": "Identificador do Certificado",
+                    "size": "60",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "FIE Provis\u00e3o",
+        "size": "-",
+        "nullable": true
+    },
+    "resgate_portabilidade": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "evento_id": {
+                    "type": "string",
+                    "description": "Identificador do evento",
+                    "size": "80",
+                    "nullable": false
+                },
+                "apolice_codigo": {
+                    "type": "string",
+                    "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+                    "size": "60",
+                    "nullable": false
+                },
+                "certificado_codigo": {
+                    "type": "string",
+                    "description": "Identificador do Certificado",
+                    "size": "60",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Regates e Portabilidades",
+        "size": "-",
+        "nullable": true
+    },
+    "ctt_assist": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "identificacao_ctt": {
+                    "type": "string",
+                    "description": "Identificador do Contrato",
+                    "size": "100",
+                    "nullable": false
+                },
+                "apolice_codigo": {
+                    "type": "string",
+                    "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+                    "size": "60",
+                    "nullable": false
+                },
+                "certificado_codigo": {
+                    "type": "string",
+                    "description": "Identificador do Certificado",
+                    "size": "60",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "CTT Assist\u00eancia",
+        "size": "-",
+        "nullable": true
+    },
+    "ctt_alteracao": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "identificacao_ctt": {
+                    "type": "string",
+                    "description": "Identificador do Contrato",
+                    "size": "100",
+                    "nullable": false
+                },
+                "identificacao_alteracao_ctt": {
+                    "type": "string",
+                    "description": "Identificador da Altera\u00e7\u00e3o do Contrato",
+                    "size": "100",
+                    "nullable": false
+                },
+                "apolice_codigo": {
+                    "type": "string",
+                    "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+                    "size": "60",
+                    "nullable": false
+                },
+                "certificado_codigo": {
+                    "type": "string",
+                    "description": "Identificador do Certificado",
+                    "size": "60",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Altera\u00e7\u00e3o CTT",
+        "size": "-",
+        "nullable": true
+    },
+    "ctt_saldo": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "identificador_movimento": {
+                    "type": "string",
+                    "description": "Identificador do Movimento de Assist\u00eancia",
+                    "size": "80",
+                    "nullable": false
+                },
+                "identificacao_ctt": {
+                    "type": "string",
+                    "description": "Identificador do Contrato de Assist\u00eancia ",
+                    "size": "100",
+                    "nullable": false
+                },
+                "numero_aditamento": {
+                    "type": "string",
+                    "description": "Identificador da Altera\u00e7\u00e3o do Contrato",
+                    "size": "100",
+                    "nullable": true
+                },
+                "apolice_codigo": {
+                    "type": "string",
+                    "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+                    "size": "60",
+                    "nullable": false
+                },
+                "certificado_codigo": {
+                    "type": "string",
+                    "description": "Identificador do Certificado",
+                    "size": "60",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Saldo devedor CTT",
+        "size": "-",
+        "nullable": true
+    },
+    "cosseguro_aceito": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "ident_cosseguro_aceito": {
+                    "type": "string",
+                    "description": "Identificador do Cosseguro Aceito",
+                    "size": "60",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Cosseguro Aceito",
+        "size": "-",
+        "nullable": true
+    },
+    "cosseguro_aceito_alteracao": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "ident_cosseguro_aceito": {
+                    "type": "string",
+                    "description": "Identificador do Cosseguro Aceito",
+                    "size": "60",
+                    "nullable": false
+                },
+                "ident_alt_cosseguro_aceito": {
+                    "type": "string",
+                    "description": "Identificador da Altera\u00e7\u00e3o do Cosseguro Aceito",
+                    "size": "60",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Altera\u00e7\u00e3o cosseguro aceito",
+        "size": "-",
+        "nullable": true
+    },
+    "sinistro_cosseguro_aceito": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "codigo_sinistro": {
+                    "type": "string",
+                    "description": "Identificador do Sinistro de Cosseguro Aceito",
+                    "size": "50",
+                    "nullable": false
+                },
+                "ident_cosseguro_aceito": {
+                    "type": "string",
+                    "description": "Identificador do Documento de Cosseguro Aceito",
+                    "size": "60",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Sinistro cosseguro aceito",
+        "size": "-",
+        "nullable": true
+    },
+    "alteracao_sinistro_cosseguro_aceito": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "codigo_sinistro": {
+                    "type": "string",
+                    "description": "Identificador do sinistro de cosseguro aceito",
+                    "size": "50",
+                    "nullable": false
+                },
+                "codigo_alt_sinistro": {
+                    "type": "string",
+                    "description": "Identificador da altera\u00e7\u00e3o do sinistro cosseguro aceito",
+                    "size": "50",
+                    "nullable": false
+                },
+                "ident_cosseguro_aceito": {
+                    "type": "string",
+                    "description": "Identificador do Documento de Cosseguro Aceito",
+                    "size": "60",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Altera\u00e7\u00e3o Sinistro cosseguro aceito",
+        "size": "-",
+        "nullable": true
+    },
+    "contrato_resseguro": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "numero_contrato": {
+                    "type": "string",
+                    "description": "Identificador do Contrato de Resseguro",
+                    "size": "50",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Contrato Resseguro",
+        "size": "-",
+        "nullable": true
+    },
+    "alteracao_contrato_resseguro": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "numero_contrato": {
+                    "type": "string",
+                    "description": "Identificador do Contrato de Resseguro",
+                    "size": "50",
+                    "nullable": false
+                },
+                "numero_endosso": {
+                    "type": "string",
+                    "description": "Identificador do Aditamento do Contrato de Resseguro",
+                    "size": "60",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Altera\u00e7\u00e3o contrato resseguro",
+        "size": "-",
+        "nullable": true
+    },
+    "premio_resseguro": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "numero_contrato": {
+                    "type": "string",
+                    "description": "Identificador do Contrato de Resseguro",
+                    "size": "50",
+                    "nullable": false
+                },
+                "identificador_movimento": {
+                    "type": "string",
+                    "description": "Identificador do Movimento",
+                    "size": "50",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Pr\u00eamio resseguro",
+        "size": "-",
+        "nullable": true
+    },
+    "alteracao_premio_resseguro": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "numero_contrato": {
+                    "type": "string",
+                    "description": "Identificador do Contrato de Resseguro",
+                    "size": "50",
+                    "nullable": false
+                },
+                "identificador_movimento": {
+                    "type": "string",
+                    "description": "Identificador do Movimento",
+                    "size": "50",
+                    "nullable": false
+                },
+                "identificador_alteracao_movimento": {
+                    "type": "string",
+                    "description": "Identificador da altera\u00e7\u00e3o do movimento",
+                    "size": "50",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Altera\u00e7\u00e3o pr\u00eamio resseguro",
+        "size": "-",
+        "nullable": true
+    },
+    "sinistro_resseguro": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "codigo_sinistro": {
+                    "type": "string",
+                    "description": "Identificador do sinistro",
+                    "size": "50",
+                    "nullable": false
+                },
+                "numero_contrato": {
+                    "type": "string",
+                    "description": "Identificador do Contrato de Resseguro",
+                    "size": "50",
+                    "nullable": false
+                },
+                "identificador_movimento": {
+                    "type": "string",
+                    "description": "Identificador do Movimento",
+                    "size": "50",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Sinistro resseguro",
+        "size": "-",
+        "nullable": true
+    },
+    "alteracao_sinistro_resseguro": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "codigo_sinistro": {
+                    "type": "string",
+                    "description": "Identificador do sinistro",
+                    "size": "50",
+                    "nullable": false
+                },
+                "numero_contrato": {
+                    "type": "string",
+                    "description": "Identificador do Contrato de Resseguro",
+                    "size": "50",
+                    "nullable": false
+                },
+                "identificador_movimento": {
+                    "type": "string",
+                    "description": "Identificador do Movimento",
+                    "size": "50",
+                    "nullable": false
+                },
+                "identificador_alteracao_movimento": {
+                    "type": "string",
+                    "description": "Identificador da Altera\u00e7\u00e3o do Movimento",
+                    "size": "50",
+                    "nullable": false
+                }
+            }
+        ],
+        "description": "Altera\u00e7\u00e3o sinistro resseguro",
+        "size": "-",
+        "nullable": true
+    },
+    "bloqueio_gravame": {
+        "type": [
+            {
+                "codigo_seguradora": {
+                    "type": "string",
+                    "description": "C\u00f3digo da Seguradora",
+                    "size": "5",
+                    "nullable": false
+                },
+                "identificador_movimento": {
+                    "type": "string",
+                    "description": "Identificador do Evento",
+                    "size": "80",
+                    "nullable": false
+                },
+                "apolice_codigo": {
+                    "type": "string",
+                    "description": "Identificador do Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+                    "size": "60",
+                    "nullable": true
+                },
+                "certificado_codigo": {
+                    "type": "string",
+                    "description": "Identificador do Certificado",
+                    "size": "60",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Bloqueios e Gravames",
+        "size": "-",
+        "nullable": true
+    }
+}
