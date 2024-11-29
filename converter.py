@@ -61,9 +61,12 @@ def date_hook(json_dict):
                 json_dict[key] = datetime.strptime(value, "%Y-%m-%d %H:%M:%S")
             except:
                 try:
-                    json_dict[key] = datetime.fromisoformat(value)
+                    json_dict[key] = datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ")
                 except:
-                    pass
+                    try:
+                        json_dict[key] = datetime.fromisoformat(value)
+                    except:
+                        pass
     return json_dict
 
 layout = sys.argv[1]
