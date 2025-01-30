@@ -592,9 +592,9 @@
                             "size": "500",
                             "nullable": true
                         },
-                        "valor_ou_prazo": {
+                        "franquia_aplicacao": {
                             "type": "int",
-                            "description": "Franquia de valor ou prazo?",
+                            "description": "Forma de aplica\u00e7\u00e3o da franquia",
                             "size": "1",
                             "nullable": false
                         },
@@ -620,6 +620,12 @@
                             "type": "int",
                             "description": "Indicador de Dias \u00dateis ou Corridos",
                             "size": "1",
+                            "nullable": true
+                        },
+                        "percentual_franquia": {
+                            "type": "decimal(7,4)",
+                            "description": "Percentual da franquia",
+                            "size": "7,4",
                             "nullable": true
                         },
                         "possui_franquia_ind_integr": {
@@ -962,6 +968,12 @@
                     "size": "50",
                     "nullable": false
                 },
+                "tipo_cobertura": {
+                    "type": "int",
+                    "description": "Tipo da Cobertura",
+                    "size": "1",
+                    "nullable": false
+                },
                 "tipo_garantia": {
                     "type": "int",
                     "description": "Tipo do Objeto do Seguro Garantia",
@@ -1112,6 +1124,12 @@
                     "size": "50",
                     "nullable": false
                 },
+                "tipo_cobertura": {
+                    "type": "int",
+                    "description": "Tipo da Cobertura",
+                    "size": "1",
+                    "nullable": false
+                },
                 "possui_fesr": {
                     "type": "boolean",
                     "description": "Possui participa\u00e7\u00e3o no FESR?",
@@ -1199,6 +1217,12 @@
                     "size": "50",
                     "nullable": false
                 },
+                "possui_rc_profissional": {
+                    "type": "boolean",
+                    "description": "Possui cobertura de RC Profissional?",
+                    "size": "1",
+                    "nullable": false
+                },
                 "classe_profissional": {
                     "type": "int",
                     "description": "Classe profissional",
@@ -1259,7 +1283,7 @@
                 "codigo_cnae": {
                     "type": "string",
                     "description": "C\u00f3digo CNAE",
-                    "size": "7",
+                    "size": "2",
                     "nullable": true
                 },
                 "quantidade_unidades_estado": {
@@ -1348,6 +1372,12 @@
                     "type": "string",
                     "description": "Identificador do Objeto Autom\u00f3vel",
                     "size": "50",
+                    "nullable": false
+                },
+                "possui_cobertura_casco": {
+                    "type": "boolean",
+                    "description": "Possui cobertura de Casco?",
+                    "size": "1",
                     "nullable": false
                 },
                 "tipo": {
@@ -1587,7 +1617,7 @@
                 "documento": {
                     "type": "string",
                     "description": "Documento de identifica\u00e7\u00e3o do Financiador",
-                    "size": "40",
+                    "size": "14",
                     "nullable": false
                 },
                 "nome": {
@@ -1629,7 +1659,7 @@
                 "codigo_postal": {
                     "type": "string",
                     "description": "C\u00f3digo postal do im\u00f3vel financiado",
-                    "size": "30",
+                    "size": "8",
                     "nullable": false
                 }
             }

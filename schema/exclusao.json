@@ -1,3 +1,4 @@
+
 {            
     "uuid": {
         "type": "string",
@@ -21,6 +22,12 @@
         "type": "string",
         "description": "Identifica\u00e7\u00e3o da Registradora",
         "size": "14",
+        "nullable": false
+    },
+    "data_registro": {
+        "type": "timestamp",
+        "description": "Data do Registro",
+        "size": "-",
         "nullable": false
     },
     "uuid_excluido": {
@@ -48,9 +55,9 @@
         "nullable": false
     },
     "data_exclusao": {
-        "type": "timestamp",
+        "type": "date",
         "description": "Data de Exclus\u00e3o",
-        "size": "-",
+        "size": "10",
         "nullable": false            
     },
     "documento": {
@@ -113,7 +120,7 @@
         "size": "-",
         "nullable": true
     },
-    "sinistro_evento_gerador": {
+    "sinistro": {
         "type": [
             {
                 "codigo_seguradora": {
@@ -194,10 +201,16 @@
                     "size": "5",
                     "nullable": false
                 },
-                "identificador_fie": {
+                "fie_cnpj": {
                     "type": "string",
-                    "description": "Identificador do FIE",
-                    "size": "80",
+                    "description": "CNPJ do FIE",
+                    "size": "14",
+                    "nullable": false
+                },
+                "data_movimento": {
+                    "type": "string",
+                    "description": "Data do Movimento",
+                    "size": "7",
                     "nullable": false
                 },
                 "apolice_codigo": {
@@ -344,12 +357,6 @@
                     "size": "100",
                     "nullable": false
                 },
-                "numero_aditamento": {
-                    "type": "string",
-                    "description": "Identificador da Altera\u00e7\u00e3o do Contrato",
-                    "size": "100",
-                    "nullable": true
-                },
                 "apolice_codigo": {
                     "type": "string",
                     "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
@@ -443,7 +450,7 @@
         "size": "-",
         "nullable": true
     },
-    "alteracao_sinistro_cosseguro_aceito": {
+    "sinistro_cosseguro_aceito_alteracao": {
         "type": [
             {
                 "codigo_seguradora": {
@@ -497,7 +504,7 @@
         "size": "-",
         "nullable": true
     },
-    "alteracao_contrato_resseguro": {
+    "contrato_resseguro_alteracao": {
         "type": [
             {
                 "codigo_seguradora": {
@@ -551,7 +558,7 @@
         "size": "-",
         "nullable": true
     },
-    "alteracao_premio_resseguro": {
+    "premio_resseguro_alteracao": {
         "type": [
             {
                 "codigo_seguradora": {
@@ -617,7 +624,7 @@
         "size": "-",
         "nullable": true
     },
-    "alteracao_sinistro_resseguro": {
+    "sinistro_resseguro_alteracao": {
         "type": [
             {
                 "codigo_seguradora": {

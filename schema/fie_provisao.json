@@ -1,0 +1,116 @@
+{
+    "uuid": {
+        "type": "string",
+        "description": "Uuid",
+        "size": "36",
+        "nullable": false
+    },
+    "anotacao": {
+        "type": "string",
+        "description": "Anota\u00e7\u00e3o Registro",
+        "size": "500",
+        "nullable": true
+    },
+    "layout": {
+        "type": "string",
+        "description": "Layout",
+        "size": "-",
+        "nullable": false
+    },
+    "codigo_registradora": {
+        "type": "string",
+        "description": "Identifica\u00e7\u00e3o da Registradora",
+        "size": "14",
+        "nullable": false
+    },
+    "data_registro": {
+        "type": "timestamp",
+        "description": "Data do Registro",
+        "size": "-",
+        "nullable": false
+    },
+    "data_alteracao": {
+        "type": "timestamp",
+        "description": "Data da Altera\u00e7\u00e3o do Registro",
+        "size": "-",
+        "nullable": true
+    },
+    "codigo_seguradora": {
+        "type": "string",
+        "description": "C\u00f3digo da Seguradora",
+        "size": "5",
+        "nullable": false
+    },
+    "fie_cnpj": {
+        "type": "string",
+        "description": "CNPJ do FIE",
+        "size": "14",
+        "nullable": false
+    },
+    "data_movimento": {
+        "type": "string",
+        "description": "Data do Movimento",
+        "size": "7",
+        "nullable": false
+    },
+    "apolice_codigo": {
+        "type": "string",
+        "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+        "size": "60",
+        "nullable": false
+    },
+    "certificado_codigo": {
+        "type": "string",
+        "description": "Identificador do Certificado",
+        "size": "60",
+        "nullable": true
+    },
+    "cod_cobertura_sobrevivencia": {
+        "type": "string",
+        "description": "C\u00f3digo da Cobertura",
+        "size": "5",
+        "nullable": false
+    },
+    "pmbc_valor_mes": {
+        "type": "decimal(18,2)",
+        "description": "Valor PMBC (fim do trimestre)",
+        "size": "18,2",
+        "nullable": false
+    },
+    "pef_valor_pmbc": {
+        "type": "decimal(18,2)",
+        "description": "Valor da provis\u00e3o de excedentes financeiros (PEF) da PMBC (fim do trimestre)",
+        "size": "18,2",
+        "nullable": false
+    },
+    "pmbac_valor_mes": {
+        "type": "decimal(18,2)",
+        "description": "Valor Total da PMBaC (fim do trimestre)",
+        "size": "18,2",
+        "nullable": false
+    },
+    "pmbac_parte_participante": {
+        "type": "decimal(18,2)",
+        "description": "Valor PMBaC Participante  (fim do trimestre)",
+        "size": "18,2",
+        "nullable": false
+    },
+    "pmbac_parte_estipulante": {
+        "type": "decimal(18,2)",
+        "description": "Valor PMBaC Estipulante (fim do trimestre)",
+        "size": "18,2",
+        "nullable": false
+    },
+    "pef_valor_pmbac": {
+        "type": "decimal(18,2)",
+        "description": "Valor da provis\u00e3o de excedentes financeiros (PEF) da PMBaC (fim do trimestre)",
+        "size": "18,2",
+        "nullable": false
+    },
+    "retificacao_registro": {
+        "type": "boolean",
+        "description": "Retifica\u00e7\u00e3o de registro?",
+        "size": "-",
+        "nullable": false
+    }
+}

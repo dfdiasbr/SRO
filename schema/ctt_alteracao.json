@@ -1,0 +1,176 @@
+{
+    "uuid": {
+        "type": "string",
+        "description": "Uuid",
+        "size": "36",
+        "nullable": false
+    },
+    "anotacao": {
+        "type": "string",
+        "description": "Anota\u00e7\u00e3o Registro",
+        "size": "500",
+        "nullable": true
+    },
+    "layout": {
+        "type": "string",
+        "description": "Layout",
+        "size": "-",
+        "nullable": false
+    },
+    "codigo_registradora": {
+        "type": "string",
+        "description": "Identifica\u00e7\u00e3o da Registradora",
+        "size": "14",
+        "nullable": false
+    },
+    "data_registro": {
+        "type": "timestamp",
+        "description": "Data do Registro",
+        "size": "-",
+        "nullable": false
+    },
+    "data_alteracao": {
+        "type": "timestamp",
+        "description": "Data da Altera\u00e7\u00e3o do Registro",
+        "size": "-",
+        "nullable": true
+    },
+    "codigo_seguradora": {
+        "type": "string",
+        "description": "C\u00f3digo da Seguradora",
+        "size": "5",
+        "nullable": false
+    },
+    "identificacao_ctt": {
+        "type": "string",
+        "description": "Identificador do Contrato",
+        "size": "100",
+        "nullable": false
+    },
+    "identificacao_alteracao_ctt": {
+        "type": "string",
+        "description": "Identificador da Altera\u00e7\u00e3o do Contrato",
+        "size": "100",
+        "nullable": false
+    },
+    "apolice_codigo": {
+        "type": "string",
+        "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+        "size": "60",
+        "nullable": false
+    },
+    "certificado_codigo": {
+        "type": "string",
+        "description": "Identificador do Certificado",
+        "size": "60",
+        "nullable": true
+    },
+    "documento": {
+        "type": "string",
+        "description": "Documento de Identifica\u00e7\u00e3o da Pessoa Associada",
+        "size": "40",
+        "nullable": false
+    },
+    "numero_processo": {
+        "type": "string",
+        "description": "N\u00famero do Processo Susep",
+        "size": "20",
+        "nullable": false
+    },
+    "tipo_documento": {
+        "type": "int",
+        "description": "Tipo de Documento da Pessoa Associada",
+        "size": "2",
+        "nullable": false
+    },
+    "nome": {
+        "type": "string",
+        "description": "Nome ou Raz\u00e3o Social da Pessoa Associada",
+        "size": "144",
+        "nullable": false
+    },
+    "valor_concedido": {
+        "type": "decimal(18,2)",
+        "description": "Valor do Credito concedido",
+        "size": "18,2",
+        "nullable": false
+    },
+    "valor_creditado": {
+        "type": "decimal(18,2)",
+        "description": "Valor L\u00edquido Creditado",
+        "size": "18,2",
+        "nullable": false
+    },
+    "valor_contraprestacao": {
+        "type": "decimal(18,2)",
+        "description": "Valor das Contrapresta\u00e7\u00f5es",
+        "size": "18,2",
+        "nullable": false
+    },
+    "periodicidade_contraprestacao": {
+        "type": "int",
+        "description": "Periodicidade das Contrapresta\u00e7\u00f5es",
+        "size": "2",
+        "nullable": false
+    },
+    "quantidade_contraprestacao": {
+        "type": "int",
+        "description": "Quantidade das Contrapresta\u00e7\u00f5es",
+        "size": "3",
+        "nullable": false
+    },
+    "primeira_contraprestacao_data": {
+        "type": "date",
+        "description": "Data de vencimento da primeira contrapresta\u00e7\u00f5es",
+        "size": "10",
+        "nullable": false
+    },
+    "ultima_contreaprestacao_data": {
+        "type": "date",
+        "description": "Data de vencimento da \u00faltima contrapresta\u00e7\u00f5es",
+        "size": "10",
+        "nullable": false
+    },
+    "percentual_juros_contratado": {
+        "type": "decimal(7,4)",
+        "description": "Taxa de juros contratado",
+        "size": "7,4",
+        "nullable": false
+    },
+    "percentual_custo_efetivo": {
+        "type": "decimal(7,4)",
+        "description": "Taxa do custo efetivo total",
+        "size": "7,4",
+        "nullable": false
+    },
+    "fidc_cnpj": {
+        "type": "string",
+        "description": "CNPJ do FIDC",
+        "size": "40",
+        "nullable": false
+    },
+    "tributos_valor": {
+        "type": "decimal(18,2)",
+        "description": "Valor de Tributos ",
+        "size": "18,2",
+        "nullable": false
+    },
+    "despesas_valor": {
+        "type": "decimal(18,2)",
+        "description": "Valor de Despesas e Encargos",
+        "size": "18,2",
+        "nullable": false
+    },
+    "tarifa_valor": {
+        "type": "decimal(18,2)",
+        "description": "Valor da tarifa administrativa",
+        "size": "18,2",
+        "nullable": false
+    },
+    "retificacao_registro": {
+        "type": "boolean",
+        "description": "Retifica\u00e7\u00e3o de registro?",
+        "size": "-",
+        "nullable": false
+    }
+}

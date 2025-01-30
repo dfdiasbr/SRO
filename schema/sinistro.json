@@ -448,6 +448,12 @@
                     "size": "50",
                     "nullable": false
                 },
+                "tipo_cobertura": {
+                    "type": "int",
+                    "description": "Identifica o tipo da cobertura à qual o objeto se refere",
+                    "size": "1",
+                    "nullable": false
+                },
                 "data_ocorrencia_inicio": {
                     "type": "date",
                     "description": "Data de ocorr\u00eancia in\u00edcio",
@@ -550,12 +556,6 @@
                     "size": "50",
                     "nullable": false
                 },
-                "numero_convenio": {
-                    "type": "string",
-                    "description": "N\u00famero do Conv\u00eanio",
-                    "size": "50",
-                    "nullable": true
-                },
                 "evento_auto": {
                     "type": "int",
                     "description": "Evento / Cobertura",
@@ -580,12 +580,6 @@
                     "size": "10",
                     "nullable": true
                 },
-                "pais_ocorrencia_sinistro": {
-                    "type": "string",
-                    "description": "Pa\u00eds de ocorr\u00eancia do sinistro",
-                    "size": "3",
-                    "nullable": true
-                },
                 "municipio_sinistro": {
                     "type": "int",
                     "description": "Munic\u00edpio de ocorr\u00eancia do sinistro",
@@ -607,6 +601,25 @@
             }
         ],
         "description": "Dados Autom\u00f3vel",
+        "size": "-",
+        "nullable": true
+    },
+    "dados_carta_verde": {
+        "type": {
+            "numero_convenio": {
+                "type": "string",
+                "description": "Indica o número do convênio (Carta Verde)",
+                "size": "50",
+                "nullable": false
+            },
+            "pais_ocorrencia_sinistro": {
+                "type": "string",
+                "description": "País de ocorrência do sinistro (Carta Verde)",
+                "size": "3",
+                "nullable": false
+            }
+        },
+        "description": "Dados Carta Verde",
         "size": "-",
         "nullable": true
     },

@@ -1,0 +1,135 @@
+{
+    "uuid": {
+        "type": "string",
+        "description": "Uuid",
+        "size": "36",
+        "nullable": false
+    },
+    "anotacao": {
+        "type": "string",
+        "description": "Anota\u00e7\u00e3o Registro",
+        "size": "500",
+        "nullable": true
+    },
+    "layout": {
+        "type": "string",
+        "description": "Layout",
+        "size": "-",
+        "nullable": false
+    },
+    "codigo_registradora": {
+        "type": "string",
+        "description": "Identifica\u00e7\u00e3o da Registradora",
+        "size": "14",
+        "nullable": false
+    },
+    "data_registro": {
+        "type": "timestamp",
+        "description": "Data do Registro",
+        "size": "-",
+        "nullable": false
+    },
+    "data_alteracao": {
+        "type": "timestamp",
+        "description": "Data da Altera\u00e7\u00e3o do Registro",
+        "size": "-",
+        "nullable": true
+    },
+    "codigo_seguradora": {
+        "type": "string",
+        "description": "C\u00f3digo da Seguradora",
+        "size": "5",
+        "nullable": false
+    },
+    "identificador_movimento": {
+        "type": "string",
+        "description": "Identificador do Movimento de Assist\u00eancia",
+        "size": "80",
+        "nullable": false
+    },
+    "identificacao_ctt": {
+        "type": "string",
+        "description": "Identificador do Contrato de Assist\u00eancia ",
+        "size": "100",
+        "nullable": false
+    },
+    "apolice_codigo": {
+        "type": "string",
+        "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+        "size": "60",
+        "nullable": false
+    },
+    "certificado_codigo": {
+        "type": "string",
+        "description": "Identificador do Certificado",
+        "size": "60",
+        "nullable": true
+    },
+    "data_movimento": {
+        "type": "date",
+        "description": "Data do Movimento",
+        "size": "10",
+        "nullable": false
+    },
+    "status_movimento": {
+        "type": "int",
+        "description": "Status do Movimento",
+        "size": "1",
+        "nullable": false
+    },
+    "saldo_devedor": {
+        "type": "decimal(18,2)",
+        "description": "Saldo Devedor Atualizado",
+        "size": "18,2",
+        "nullable": false
+    },
+    "possui_securitizacao": {
+        "type": "boolean",
+        "description": "Possui contrato securitizado em FIDC?",
+        "size": "-",
+        "nullable": false
+    },
+    "retificacao_registro": {
+        "type": "boolean",
+        "description": "Retifica\u00e7\u00e3o de registro?",
+        "size": "-",
+        "nullable": false
+    },
+    "securitizacao_saldo": {
+        "type": {
+            "fidc_cnpj": {
+                "type": "string",
+                "description": "CNPJ do FIDC",
+                "size": "40",
+                "nullable": false
+            },
+            "saldo_devedor_montante": {
+                "type": "decimal(18,2)",
+                "description": "Montante Saldo Devedor",
+                "size": "18,2",
+                "nullable": false
+            },
+            "id_cotas": {
+                "type": "int",
+                "description": "Identifica\u00e7\u00e3o das cotas",
+                "size": "2",
+                "nullable": true
+            },
+            "quantidade_cotas": {
+                "type": "decimal(14,5)",
+                "description": "Quantidade de cotas",
+                "size": "14,5",
+                "nullable": true
+            },
+            "valor_cotas": {
+                "type": "decimal(18,2)",
+                "description": "Valor de Mercado das cotas",
+                "size": "18,2",
+                "nullable": true
+            }
+        },
+        "description": "Securitiza\u00e7\u00e3o do Saldo Devedor",
+        "size": "-",
+        "nullable": true
+    }
+}

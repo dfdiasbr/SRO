@@ -107,61 +107,15 @@
         "size": "10",
         "nullable": false
     },
+    "valor_total_real": {
+        "type": "decimal(18,2)",
+        "description": "Valor Total do Pr\u00eamio/Contribui\u00e7\u00e3o em Reais",
+        "size": "18,2",
+        "nullable": false
+    },
     "retificacao_registro": {
         "type": "boolean",
         "description": "Retifica\u00e7\u00e3o de registro?",
-        "size": "-",
-        "nullable": false
-    },
-    "intermediario": {
-        "type": [
-            {
-                "documento": {
-                    "type": "string",
-                    "description": "Documento do Intermedi\u00e1rio",
-                    "size": "40",
-                    "nullable": false
-                },
-                "valor_remuneracao_real": {
-                    "type": "decimal(18,2)",
-                    "description": "Valor de Remunera\u00e7\u00e3o do Intermedi\u00e1rio em Reais",
-                    "size": "18,2",
-                    "nullable": false
-                }
-            }
-        ],
-        "description": "Intermedi\u00e1rio",
-        "size": "-",
-        "nullable": false
-    } ,
-    "premio_contribuicao": {
-        "type": {
-            "valor_total_real": {
-                "type": "decimal(18,2)",
-                "description": "Valor Total do Pr\u00eamio/Contribui\u00e7\u00e3o em Reais",
-                "size": "18,2",
-                "nullable": false
-            },
-            "adicional_fracionamento": {
-                "type": "decimal(18,2)",
-                "description": "Valor Total do Adicional de Fracionamento",
-                "size": "18,2",
-                "nullable": false
-            },
-            "valor_carregamento_total": {
-                "type": "decimal(18,2)",
-                "description": "Valor Total do Carregamento",
-                "size": "18,2",
-                "nullable": false
-            },
-            "iof": {
-                "type": "decimal(18,2)",
-                "description": "Valor total do IOF",
-                "size": "18,2",
-                "nullable": false
-            }
-        },
-        "description": "Pr\u00eamio/Contribui\u00e7\u00e3o Total",
         "size": "-",
         "nullable": false
     },
@@ -186,12 +140,6 @@
                     "size": "18,2",
                     "nullable": false
                 },
-                "iof": {
-                    "type": "decimal(18,2)",
-                    "description": "Valor de IOF da Cobertura em Reais",
-                    "size": "18,2",
-                    "nullable": false
-                },
                 "data_inicio_cobertura": {
                     "type": "date",
                     "description": "Data de In\u00edcio de Vig\u00eancia da Cobertura",
@@ -213,7 +161,7 @@
     "cobertura_risco_previdencia": {
         "type": [
             {
-                "cod_cobertura_prevrisco": {
+                "cod_cobertura_prev_risco": {
                     "type": "string",
                     "description": "C\u00f3digo da Cobertura",
                     "size": "5",
