@@ -5,6 +5,7 @@ import pyarrow.parquet as pq
 from datetime import datetime
 import os
 import sys
+import re
 
 def verify_type(field_type, field_size):
     # print(field_type, field_size)
@@ -53,20 +54,29 @@ def build_schema(schema):
         yield new_field
 
 def date_hook(json_dict):
+    date_patterns = [
+        r'^\d{4}-\d{2}-\d{2}$', # YYYY-MM-DD
+        r'^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$', # YYYY-MM-DD HH:MM:SS
+        r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$', # YYYY-MM-DDTHH:MM:SSZ
+        r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}$' # YYYY-MM-DDTHH:MM:SS
+    ]
+
     for (key, value) in json_dict.items():
-        try:
-            json_dict[key] = datetime.strptime(value, "%Y-%m-%d")
-        except:
-            try:
-                json_dict[key] = datetime.strptime(value, "%Y-%m-%d %H:%M:%S")
-            except:
+        if isinstance(value, str):
+            if any(re.match(pattern, value) for pattern in date_patterns):
                 try:
-                    json_dict[key] = datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ")
+                    json_dict[key] = datetime.strptime(value, "%Y-%m-%d")
                 except:
                     try:
-                        json_dict[key] = datetime.fromisoformat(value)
+                        json_dict[key] = datetime.strptime(value, "%Y-%m-%d %H:%M:%S")
                     except:
-                        pass
+                        try:
+                            json_dict[key] = datetime.strptime(value, "%Y-%m-%dT%H:%M:%SZ")
+                        except:
+                            try:
+                                json_dict[key] = datetime.fromisoformat(value)
+                            except:
+                                pass
     return json_dict
 
 layout = sys.argv[1]
