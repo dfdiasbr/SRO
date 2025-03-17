@@ -622,7 +622,7 @@
                             "size": "1",
                             "nullable": true
                         },
-                        "percentual_franquia": {
+                        "franquia_percentual": {
                             "type": "decimal(7,4)",
                             "description": "Percentual da franquia",
                             "size": "7,4",
@@ -815,13 +815,7 @@
                 },
                 "complementar_rcc_capitalizacao": {
                     "type": [
-                        {
-                            "identificador_rcc_cap": {
-                                "type": "string",
-                                "description": "Identificador complementar RCC e Cap",
-                                "size": "50",
-                                "nullable": false
-                            },
+                        {                            
                             "tabua_tipo": {
                                 "type": "int",
                                 "description": "Tipo de T\u00e1bua",
@@ -1024,7 +1018,7 @@
                 },
                 "possui_ccg": {
                     "type": "boolean",
-                    "description": "Possui Contrato de Contragarantia (CCG)?",
+                    "description": "Possui Contrato de Contragarantia (CCG)? ",
                     "size": "-",
                     "nullable": false
                 }
@@ -1379,6 +1373,24 @@
                     "description": "Possui cobertura de Casco?",
                     "size": "1",
                     "nullable": false
+                },
+                "possui_identificacao": {
+                    "type": "boolean",
+                    "description": "Possui identifica\u00e7\u00e3o exata do ve\u00edculo?",
+                    "size": "1",
+                    "nullable": false
+                },
+                "placa": {
+                    "type": "string",
+                    "description": "Placa do ve\u00edculo",
+                    "size": "7",
+                    "nullable": true
+                },
+                "renavam": {
+                    "type": "string",
+                    "description": "C\u00f3digo Renavam",
+                    "size": "11",
+                    "nullable": true
                 },
                 "tipo": {
                     "type": "int",

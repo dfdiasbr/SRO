@@ -697,7 +697,7 @@
                             "size": "1",
                             "nullable": true
                         },
-                        "percentual_franquia": {
+                        "franquia_percentual": {
                             "type": "decimal(7,4)",
                             "description": "Percentual da franquia",
                             "size": "7,4",

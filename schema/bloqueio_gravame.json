@@ -51,7 +51,7 @@
         "type": "string",
         "description": "Identificador do Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
         "size": "60",
-        "nullable": true
+        "nullable": false
     },
     "certificado_codigo": {
         "type": "string",
