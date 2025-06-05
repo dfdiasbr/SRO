@@ -77,16 +77,10 @@
         "size": "50",
         "nullable": false
     },
-    "moeda": {
+    "moeda_apolice": {
         "type": "string",
         "description": "Moeda",
         "size": "3",
-        "nullable": false
-    },
-    "taxa_cambio": {
-        "type": "decimal(10,6)",
-        "description": "Taxa de C\u00e2mbio",
-        "size": "10,6",
         "nullable": false
     },
     "resseguro": {
@@ -163,11 +157,23 @@
                             "size": "18,2",
                             "nullable": false
                         },
+                        "valor_pendente_moeda_original": {
+                            "type": "decimal(18,2)",
+                            "description": "Valor Pendente na Moeda Original",
+                            "size": "18,2",
+                            "nullable": true
+                        },
                         "valor_pago_reais": {
                             "type": "decimal(18,2)",
                             "description": "Valor Pago em Reais",
                             "size": "18,2",
                             "nullable": false
+                        },
+                        "valor_pago_moeda_original": {
+                            "type": "decimal(18,2)",
+                            "description": "Valor Pago na Moeda Original",
+                            "size": "18,2",
+                            "nullable": true
                         },
                         "valor_salvado": {
                             "type": "decimal(18,2)",

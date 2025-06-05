@@ -125,7 +125,7 @@
         "size": "10",
         "nullable": false
     },
-    "ultima_contreaprestacao_data": {
+    "ultima_contraprestacao_data": {
         "type": "date",
         "description": "Data de vencimento da \u00faltima contrapresta\u00e7\u00f5es",
         "size": "10",

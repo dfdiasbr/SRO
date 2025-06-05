@@ -95,17 +95,17 @@
         "size": "3",
         "nullable": false
     },
-    "taxa_cambio": {
-        "type": "decimal(10,6)",
-        "description": "Taxa de C\u00e2mbio",
-        "size": "10,6",
-        "nullable": false
-    },
     "limite_maximo_garantia_real": {
         "type": "decimal(18,2)",
         "description": "Limite M\u00e1ximo de Garantia (LMG) em Reais",
         "size": "18,2",
         "nullable": false
+    },
+    "limite_maximo_garantia_moeda_original": {
+        "type": "decimal(18,2)",
+        "description": "Limite M\u00e1ximo de Garantia (LMG) na Moeda Original",
+        "size": "18,2",
+        "nullable": true
     },
     "percentual_retido": {
         "type": "decimal(7,4)",
@@ -356,6 +356,12 @@
                     "size": "40",
                     "nullable": false
                 },
+                "tipo_comissao": {
+                    "type": "int",
+                    "description": "Indicação do tipo da comissão paga ao Intermedi\u00e1rio",
+                    "size": "1",
+                    "nullable": false
+                },
                 "tipo": {
                     "type": "int",
                     "description": "Tipo do Intermedi\u00e1rio",
@@ -403,6 +409,12 @@
                     "description": "Valor de Comiss\u00e3o do Intermedi\u00e1rio em Reais",
                     "size": "18,2",
                     "nullable": false
+                },
+                "valor_comissao_moeda_original": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor total de Comiss\u00e3o do Intermedi\u00e1rio na moeda original",
+                    "size": "18,2",
+                    "nullable": true
                 }
             }
         ],
@@ -448,6 +460,12 @@
                     "description": "Limite M\u00e1ximo de Indeniza\u00e7\u00e3o (LMI) em Reais",
                     "size": "18,2",
                     "nullable": false
+                },
+                "limite_maximo_indenizacao_moeda_original": {
+                    "type": "decimal(18,2)",
+                    "description": "Limite M\u00e1ximo de Indeniza\u00e7\u00e3o (LMI) na Moeda Original",
+                    "size": "18,2",
+                    "nullable": true
                 },
                 "data_inicio_cobertura": {
                     "type": "date",
@@ -508,6 +526,12 @@
                     "description": "Valor de Pr\u00eamio da Cobertura em Reais",
                     "size": "18,2",
                     "nullable": false
+                },
+                "valor_premio_moeda_original": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor de Pr\u00eamio da cobertura na moeda original",
+                    "size": "18,2",
+                    "nullable": true
                 },
                 "iof": {
                     "type": "decimal(18,2)",
@@ -814,46 +838,44 @@
                     "nullable": true
                 },
                 "complementar_rcc_capitalizacao": {
-                    "type": [
-                        {                            
-                            "tabua_tipo": {
-                                "type": "int",
-                                "description": "Tipo de T\u00e1bua",
-                                "size": "2",
-                                "nullable": false
-                            },
-                            "tabua_biometrica": {
-                                "type": "int",
-                                "description": "T\u00e1bua Biom\u00e9trica",
-                                "size": "2",
-                                "nullable": false
-                            },
-                            "percentual_acum_rcc_cap": {
-                                "type": "decimal(7,4)",
-                                "description": "Taxa de Juros da fase de acumula\u00e7\u00e3o",
-                                "size": "7,4",
-                                "nullable": true
-                            },
-                            "forma_pagamento": {
-                                "type": "int",
-                                "description": "Forma de Pagamento da Indeniza\u00e7\u00e3o",
-                                "size": "1",
-                                "nullable": false
-                            },
-                            "percentual_rendas_rcc_cap": {
-                                "type": "decimal(7,4)",
-                                "description": "Taxa de Juros Rendas",
-                                "size": "7,4",
-                                "nullable": true
-                            },
-                            "atualizacao_indice": {
-                                "type": "int",
-                                "description": "\u00cdndice de Atualiza\u00e7\u00e3o Monet\u00e1ria da Renda",
-                                "size": "2",
-                                "nullable": false
-                            }
+                    "type": {                            
+                        "tabua_tipo": {
+                            "type": "int",
+                            "description": "Tipo de T\u00e1bua",
+                            "size": "2",
+                            "nullable": false
+                        },
+                        "tabua_biometrica": {
+                            "type": "int",
+                            "description": "T\u00e1bua Biom\u00e9trica",
+                            "size": "2",
+                            "nullable": false
+                        },
+                        "percentual_acum_rcc_cap": {
+                            "type": "decimal(7,4)",
+                            "description": "Taxa de Juros da fase de acumula\u00e7\u00e3o",
+                            "size": "7,4",
+                            "nullable": true
+                        },
+                        "forma_pagamento": {
+                            "type": "int",
+                            "description": "Forma de Pagamento da Indeniza\u00e7\u00e3o",
+                            "size": "1",
+                            "nullable": false
+                        },
+                        "percentual_rendas_rcc_cap": {
+                            "type": "decimal(7,4)",
+                            "description": "Taxa de Juros Rendas",
+                            "size": "7,4",
+                            "nullable": true
+                        },
+                        "atualizacao_indice": {
+                            "type": "int",
+                            "description": "\u00cdndice de Atualiza\u00e7\u00e3o Monet\u00e1ria da Renda",
+                            "size": "2",
+                            "nullable": false
                         }
-                    ],
+                    },
                     "description": "Complementar RCC e Capitaliza\u00e7\u00e3o",
                     "size": "-",
                     "nullable": true
@@ -871,6 +893,12 @@
                 "description": "Valor Total do Pr\u00eamio/Contribui\u00e7\u00e3o em Reais",
                 "size": "18,2",
                 "nullable": false
+            },
+            "valor_total_moeda_original": {
+                "type": "decimal(18,2)",
+                "description": "Valor total do Pr\u00eamio/Contribui\u00e7\u00e3o na moeda original",
+                "size": "18,2",
+                "nullable": true
             },
             "adicional_fracionamento": {
                 "type": "decimal(18,2)",
@@ -941,6 +969,12 @@
                             "description": "Valor Cedido em Cosseguro",
                             "size": "18,2",
                             "nullable": false
+                        },
+                        "valor_cedido_moeda_original": {
+                            "type": "decimal(18,2)",
+                            "description": "Valor Cedido em Cosseguro na Moeda Original",
+                            "size": "18,2",
+                            "nullable": true
                         }
                     }
                 ],
@@ -1003,6 +1037,12 @@
                     "description": "Valor do Objeto Segurado em Reais",
                     "size": "18,2",
                     "nullable": false
+                },
+                "valor_moeda_original": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor do objeto segurado na moeda original",
+                    "size": "18,2",
+                    "nullable": true
                 },
                 "data_inicio": {
                     "type": "date",

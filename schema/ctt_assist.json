@@ -83,6 +83,12 @@
         "size": "144",
         "nullable": false
     },
+    "data_contrato": {
+        "type": "date",
+        "description": "Data da Emiss\u00e3o do Contrato de Assist\u00eancia Financeira",
+        "size": "10",
+        "nullable": false
+    },
     "valor_concedido": {
         "type": "decimal(18,2)",
         "description": "Valor do Credito concedido",

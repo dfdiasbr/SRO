@@ -71,16 +71,10 @@
         "size": "2",
         "nullable": false
     },
-    "moeda_movimento": {
+    "moeda_apolice": {
         "type": "string",
         "description": "Moeda do Movimento",
         "size": "3",
-        "nullable": false
-    },
-    "taxa_cambio": {
-        "type": "decimal(10,6)",
-        "description": "Taxa de C\u00e2mbio",
-        "size": "10,6",
         "nullable": false
     },
     "data_inicio": {
@@ -100,6 +94,12 @@
         "description": "Valor Total do Pr\u00eamio/Contribui\u00e7\u00e3o em Reais",
         "size": "18,2",
         "nullable": false
+    },
+    "valor_total_moeda_original": {
+        "type": "decimal(18,2)",
+        "description": "Valor Total do Pr\u00eamio/Contribui\u00e7\u00e3o na Moeda Original",
+        "size": "18,2",
+        "nullable": true
     },
     "retificacao_registro": {
         "type": "boolean",
@@ -127,6 +127,12 @@
                     "description": "Valor de Pr\u00eamio da Cobertura em Reais",
                     "size": "18,2",
                     "nullable": false
+                },
+                "valor_premio_moeda_original": {
+                    "type": "decimal(18,2)",
+                    "description": "Valor de Pr\u00eamio da Cobertura na Moeda Original",
+                    "size": "18,2",
+                    "nullable": true
                 },
                 "data_inicio_cobertura": {
                     "type": "date",

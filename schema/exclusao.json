@@ -62,12 +62,6 @@
     "documento": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "apolice_codigo": {
                     "type": "string",
                     "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
@@ -89,12 +83,6 @@
     "documento_alteracao": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "apolice_codigo": {
                     "type": "string",
                     "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
@@ -122,12 +110,6 @@
     "sinistro": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "codigo_sinistro": {
                     "type": "string",
                     "description": "Identificador do Sinistro",
@@ -155,12 +137,6 @@
     "sinistro_alteracao": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "codigo_sinistro": {
                     "type": "string",
                     "description": "Identificador do Sinistro",
@@ -194,12 +170,6 @@
     "fie_provisao": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "fie_cnpj": {
                     "type": "string",
                     "description": "CNPJ do FIE",
@@ -233,12 +203,6 @@
     "resgate_portabilidade": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "evento_id": {
                     "type": "string",
                     "description": "Identificador do evento",
@@ -266,12 +230,6 @@
     "ctt_assist": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "identificacao_ctt": {
                     "type": "string",
                     "description": "Identificador do Contrato",
@@ -299,12 +257,6 @@
     "ctt_alteracao": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "identificacao_ctt": {
                     "type": "string",
                     "description": "Identificador do Contrato",
@@ -338,12 +290,6 @@
     "ctt_saldo": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "identificador_movimento": {
                     "type": "string",
                     "description": "Identificador do Movimento de Assist\u00eancia",
@@ -377,12 +323,6 @@
     "cosseguro_aceito": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "ident_cosseguro_aceito": {
                     "type": "string",
                     "description": "Identificador do Cosseguro Aceito",
@@ -398,12 +338,6 @@
     "cosseguro_aceito_alteracao": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "ident_cosseguro_aceito": {
                     "type": "string",
                     "description": "Identificador do Cosseguro Aceito",
@@ -425,12 +359,6 @@
     "sinistro_cosseguro_aceito": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "codigo_sinistro": {
                     "type": "string",
                     "description": "Identificador do Sinistro de Cosseguro Aceito",
@@ -452,12 +380,6 @@
     "sinistro_cosseguro_aceito_alteracao": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "codigo_sinistro": {
                     "type": "string",
                     "description": "Identificador do sinistro de cosseguro aceito",
@@ -485,12 +407,6 @@
     "contrato_resseguro": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "numero_contrato": {
                     "type": "string",
                     "description": "Identificador do Contrato de Resseguro",
@@ -506,12 +422,6 @@
     "contrato_resseguro_alteracao": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "numero_contrato": {
                     "type": "string",
                     "description": "Identificador do Contrato de Resseguro",
@@ -533,12 +443,6 @@
     "premio_resseguro": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "numero_contrato": {
                     "type": "string",
                     "description": "Identificador do Contrato de Resseguro",
@@ -560,12 +464,6 @@
     "premio_resseguro_alteracao": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "numero_contrato": {
                     "type": "string",
                     "description": "Identificador do Contrato de Resseguro",
@@ -593,12 +491,6 @@
     "sinistro_resseguro": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "codigo_sinistro": {
                     "type": "string",
                     "description": "Identificador do sinistro",
@@ -626,12 +518,6 @@
     "sinistro_resseguro_alteracao": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "codigo_sinistro": {
                     "type": "string",
                     "description": "Identificador do sinistro",
@@ -665,12 +551,6 @@
     "bloqueio_gravame": {
         "type": [
             {
-                "codigo_seguradora": {
-                    "type": "string",
-                    "description": "C\u00f3digo da Seguradora",
-                    "size": "5",
-                    "nullable": false
-                },
                 "identificador_movimento": {
                     "type": "string",
                     "description": "Identificador do Evento",
@@ -681,7 +561,7 @@
                     "type": "string",
                     "description": "Identificador do Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
                     "size": "60",
-                    "nullable": true
+                    "nullable": false
                 },
                 "certificado_codigo": {
                     "type": "string",
