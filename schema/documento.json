@@ -368,6 +368,12 @@
                     "size": "2",
                     "nullable": false
                 },
+                "descricao_intermediario": {
+                    "type": "string",
+                    "description": "Descrição do intermediário",
+                    "size": "500",
+                    "nullable": true
+                },
                 "codigo": {
                     "type": "string",
                     "description": "Identificador do Corretor",
@@ -405,15 +411,15 @@
                     "nullable": false
                 },
                 "valor_comissao_real": {
-                    "type": "decimal(18,2)",
+                    "type": "decimal(18,4)",
                     "description": "Valor de Comiss\u00e3o do Intermedi\u00e1rio em Reais",
-                    "size": "18,2",
+                    "size": "18,4",
                     "nullable": false
                 },
                 "valor_comissao_moeda_original": {
-                    "type": "decimal(18,2)",
+                    "type": "decimal(18,4)",
                     "description": "Valor total de Comiss\u00e3o do Intermedi\u00e1rio na moeda original",
-                    "size": "18,2",
+                    "size": "18,4",
                     "nullable": true
                 }
             }
@@ -534,9 +540,9 @@
                     "nullable": true
                 },
                 "iof": {
-                    "type": "decimal(18,2)",
+                    "type": "decimal(18,4)",
                     "description": "Valor de IOF da Cobertura em Reais",
-                    "size": "18,2",
+                    "size": "18,4",
                     "nullable": false
                 },
                 "base_indenizacao": {
@@ -603,7 +609,14 @@
                     "nullable": true
                 },
                 "franquia": {
-                    "type": {
+                    "type": [
+                        {
+                        "identificador_franquia": {
+                        "type": "string",
+                        "description": "Identifica\u00e7\u00e3o da Franquia",
+                        "size": "50",
+                        "nullable": false
+                        },
                         "franquia_tipo": {
                             "type": "int",
                             "description": "Tipo de Franquia",
@@ -658,7 +671,8 @@
                             "size": "-",
                             "nullable": true
                         }
-                    },
+                    }
+                ],
                     "description": "Franquia",
                     "size": "-",
                     "nullable": true
@@ -757,6 +771,12 @@
                                         "type": "int",
                                         "description": "Grau de Parentesco",
                                         "size": "2",
+                                        "nullable": true
+                                    },
+                                    "descricao_grau_parentesco": {
+                                        "type": "string",
+                                        "description": "Descrição do grau de parentesco",
+                                        "size": "144",
                                         "nullable": true
                                     },
                                     "nome": {
@@ -913,9 +933,9 @@
                 "nullable": false
             },
             "iof": {
-                "type": "decimal(18,2)",
+                "type": "decimal(18,4)",
                 "description": "Valor total do IOF",
-                "size": "18,2",
+                "size": "18,4",
                 "nullable": false
             },
             "numero_parcelas": {
@@ -1284,9 +1304,9 @@
                     "size": "50",
                     "nullable": false
                 },
-                "tipo_imovel_segurado": {
+                "complementar_objeto_patrimonial": {
                     "type": "int",
-                    "description": "Tipo do im\u00f3vel ou condom\u00ednio segurado",
+                    "description": "Complementar Objeto Patrimonial",
                     "size": "3",
                     "nullable": false
                 },
@@ -1383,9 +1403,9 @@
                 "nullable": true
             },
             "dias_cobertura": {
-                "type": "string",
+                "type": "int",
                 "description": "N\u00famero de dias de cobertura para direito \u00e0 indeniza\u00e7\u00e3o",
-                "size": "4",
+                "size": "5",
                 "nullable": true
             },
             "cobertura_vinculada": {

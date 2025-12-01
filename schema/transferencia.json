@@ -1,0 +1,141 @@
+
+{
+    "uuid": {
+        "type": "string",
+        "description": "Uuid",
+        "size": "36",
+        "nullable": false
+    },
+    "anotacao": {
+        "type": "string",
+        "description": "Anota\u00e7\u00e3o Registro",
+        "size": "500",
+        "nullable": true
+    },
+    "layout": {
+        "type": "string",
+        "description": "Layout",
+        "size": "-",
+        "nullable": false
+    },
+    "codigo_registradora": {
+        "type": "string",
+        "description": "Identifica\u00e7\u00e3o da Registradora",
+        "size": "14",
+        "nullable": false
+    },
+    "data_registro": {
+        "type": "timestamp",
+        "description": "Data do Registro",
+        "size": "-",
+        "nullable": false
+    },
+    "identificador_transferencia": {
+        "type": "string",
+        "description": "Identificador da Transfer\u00eancia",
+        "size": "50",
+        "nullable": false
+    },
+    "codigo_seguradora_cedente": {
+        "type": "string",
+        "description": "C\u00f3digo da Seguradora Cedente",
+        "size": "5",
+        "nullable": false
+    },
+    "codigo_seguradora_cessionaria": {
+        "type": "string",
+        "description": "C\u00f3digo da Seguradora Cession\u00e1ria",
+        "size": "5",
+        "nullable": false
+    },
+    "tipo_operacao": {
+        "type": "int",
+        "description": "Opera\u00e7\u00e3o de transfer\u00eancia",
+        "size": "1",
+        "nullable": false
+    },
+    "indicacao_tipo": {
+        "type": "int",
+        "description": "Indica\u00e7\u00e3o do tipo de documento",
+        "size": "2",
+        "nullable": false
+    },
+    "motivo_transferencia": {
+        "type": "int",
+        "description": "Motivo da transfer\u00eancia",
+        "size": "2",
+        "nullable": false
+    },
+    "descricao_motivo": {
+        "type": "string",
+        "description": "Descri\u00e7\u00e3o do Motivo",
+        "size": "500",
+        "nullable": false
+    },
+    "data_transferencia": {
+        "type": "date",
+        "description": "Data da Transfer\u00eancia",
+        "size": "10",
+        "nullable": false
+    },
+    "processo_sei": {
+        "type": "string",
+        "description": "Processo SEI da Transfer\u00eancia",
+        "size": "20",
+        "nullable": false
+    },
+    "transferencia_documento": {
+        "type": [
+            {
+                "apolice_codigo_cedente": {
+                    "type": "string",
+                    "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual da Entidade Cedente",
+                    "size": "60",
+                    "nullable": false
+                },
+                "certificado_codigo_cedente": {
+                    "type": "string",
+                    "description": "Identificador do Certificado da Entidade Cedente",
+                    "size": "60",
+                    "nullable": true
+                },
+                "apolice_codigo_cessionaria": {
+                    "type": "string",
+                    "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual da Entidade Cession\u00e1ria",
+                    "size": "60",
+                    "nullable": true
+                },
+                "certificado_codigo_cessionaria": {
+                    "type": "string",
+                    "description": "Identificador do Certificado da Entidade Cession\u00e1ria",
+                    "size": "60",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Transfer\u00eancia Documento",
+        "size": "-",
+        "nullable": true
+    },
+    "transferencia_cosseguro_aceito": {
+        "type": [
+            {
+                "ident_cosseguro_aceito_cedente": {
+                    "type": "string",
+                    "description": "Identificador do Cosseguro Aceito na Cedente",
+                    "size": "60",
+                    "nullable": false
+                },
+                "ident_cosseguro_aceito_cessionaria": {
+                    "type": "string",
+                    "description": "Identificador do Cosseguro Aceito na Cession\u00e1ria",
+                    "size": "60",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Transfer\u00eancia Cosseguro Aceito",
+        "size": "-",
+        "nullable": true
+    }
+}
