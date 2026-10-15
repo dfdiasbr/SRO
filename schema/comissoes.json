@@ -1,0 +1,119 @@
+{
+    "uuid": {
+        "type": "string",
+        "description": "Uuid",
+        "size": "36",
+        "nullable": false
+    },
+    "anotacao": {
+        "type": "string",
+        "description": "Anota\u00e7\u00e3o Registro",
+        "size": "500",
+        "nullable": true
+    },
+    "layout": {
+        "type": "string",
+        "description": "Layout",
+        "size": "-",
+        "nullable": false
+    },
+    "codigo_registradora": {
+        "type": "string",
+        "description": "Identifica\u00e7\u00e3o da Registradora",
+        "size": "14",
+        "nullable": false
+    },
+    "data_registro": {
+        "type": "timestamp",
+        "description": "Data do Registro",
+        "size": "-",
+        "nullable": false
+    },
+    "data_alteracao": {
+        "type": "timestamp",
+        "description": "Data da Altera\u00e7\u00e3o do Registro",
+        "size": "-",
+        "nullable": true
+    },
+    "codigo_seguradora": {
+        "type": "string",
+        "description": "C\u00f3digo da Seguradora",
+        "size": "5",
+        "nullable": false
+    },
+    "apolice_codigo": {
+        "type": "string",
+        "description": "Identificador da Ap\u00f3lice, Bilhete, Contrato Coletivo ou Certificado de participante Individual",
+        "size": "60",
+        "nullable": false
+    },
+    "certificado_codigo": {
+        "type": "string",
+        "description": "Identificador do Certificado",
+        "size": "60",
+        "nullable": true
+    },
+    "data_movimento": {
+        "type": "string",
+        "description": "Data do Movimento",
+        "size": "7",
+        "nullable": false
+    },
+    "moeda_apolice": {
+        "type": "string",
+        "description": "Moeda",
+        "size": "3",
+        "nullable": false
+    },
+    "retificacao_registro": {
+        "type": "boolean",
+        "description": "Retifica\u00e7\u00e3o de registro?",
+        "size": "1",
+        "nullable": false
+    },
+    "comissoes": {
+        "type": [
+            {
+                "documento": {
+                    "type": "string",
+                    "description": "Documento do Intermedi\u00e1rio",
+                    "size": "40",
+                    "nullable": false
+                },
+                "tipo": {
+                    "type": "int",
+                    "description": "Tipo do Intermedi\u00e1rio",
+                    "size": "2",
+                    "nullable": false
+                },
+                "valor_comissao_real": {
+                    "type": "decimal(18,4)",
+                    "description": "Valor de Comiss\u00e3o do Intermedi\u00e1rio em Reais",
+                    "size": "18,4",
+                    "nullable": false
+                },
+                "valor_comissao_moeda_original": {
+                    "type": "decimal(18,4)",
+                    "description": "Valor de Comiss\u00e3o do Intermedi\u00e1rio na Moeda Original",
+                    "size": "18,4",
+                    "nullable": true
+                },
+                "valor_restituicao_real": {
+                    "type": "decimal(18,4)",
+                    "description": "Valor de Restitui\u00e7\u00e3o de Comiss\u00e3o em Reais",
+                    "size": "18,4",
+                    "nullable": false
+                },
+                "valor_restituicao_moeda_original": {
+                    "type": "decimal(18,4)",
+                    "description": "Valor de Restitui\u00e7\u00e3o de Comiss\u00e3o na Moeda Original",
+                    "size": "18,4",
+                    "nullable": true
+                }
+            }
+        ],
+        "description": "Comiss\u00f5es (mensalmente)",
+        "size": "-",
+        "nullable": false
+    }
+}

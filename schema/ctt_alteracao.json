@@ -48,9 +48,9 @@
         "nullable": false
     },
     "identificacao_alteracao_ctt": {
-        "type": "string",
+        "type": "int",
         "description": "Identificador da Altera\u00e7\u00e3o do Contrato",
-        "size": "100",
+        "size": "6",
         "nullable": false
     },
     "apolice_codigo": {
@@ -88,6 +88,24 @@
         "description": "Nome ou Raz\u00e3o Social da Pessoa Associada",
         "size": "144",
         "nullable": false
+    },
+    "data_alteracao_contrato": {
+        "type": "date",
+        "description": "Data da Altera\u00e7\u00e3o do Contrato de Assist\u00eancia Financeira",
+        "size": "10",
+        "nullable": false
+    },
+    "tipo_alteracao_contrato": {
+        "type": "int",
+        "description": "Tipo de Altera\u00e7\u00e3o Contratual",
+        "size": "2",
+        "nullable": false
+    },
+    "descr_tipo_alteracao_contratual": {
+        "type": "string",
+        "description": "Descri\u00e7\u00e3o do Tipo de Altera\u00e7\u00e3o Contratual",
+        "size": "500",
+        "nullable": true
     },
     "valor_concedido": {
         "type": "decimal(18,2)",
@@ -170,7 +188,7 @@
     "retificacao_registro": {
         "type": "boolean",
         "description": "Retifica\u00e7\u00e3o de registro?",
-        "size": "-",
+        "size": "1",
         "nullable": false
     }
 }

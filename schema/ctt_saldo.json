@@ -41,9 +41,9 @@
         "size": "5",
         "nullable": false
     },
-    "identificador_movimento": {
+    "identificador_saldo_devedor": {
         "type": "string",
-        "description": "Identificador do Movimento de Assist\u00eancia",
+        "description": "Identificador do Saldo Devedor de Assist\u00eancia",
         "size": "80",
         "nullable": false
     },
@@ -65,17 +65,23 @@
         "size": "60",
         "nullable": true
     },
-    "data_movimento": {
+    "data_atualizacao_saldo_devedor": {
         "type": "date",
-        "description": "Data do Movimento",
+        "description": "Data da atualiza\u00e7\u00e3o do saldo devedor",
         "size": "10",
         "nullable": false
     },
-    "status_movimento": {
+    "status_saldo_devedor": {
         "type": "int",
-        "description": "Status do Movimento",
+        "description": "Status do Saldo Devedor",
         "size": "1",
         "nullable": false
+    },
+    "valor_quitacao_antecipada": {
+        "type": "decimal(18,2)",
+        "description": "Valor da Quita\u00e7\u00e3o Antecipada",
+        "size": "18,2",
+        "nullable": true
     },
     "saldo_devedor": {
         "type": "decimal(18,2)",

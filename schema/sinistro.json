@@ -75,7 +75,7 @@
         "type": "boolean",
         "description": "Possui benefici\u00e1rios finais indicados?",
         "size": "-",
-        "nullable": false
+        "nullable": true
     },
     "possui_cosseguro": {
         "type": "boolean",
@@ -94,21 +94,6 @@
         "description": "Retifica\u00e7\u00e3o de registro?",
         "size": "-",
         "nullable": false
-    },
-    "contrato_ress": {
-        "type": [
-            {
-                "numero_contrato": {
-                    "type": "string",
-                    "description": "Identificador do Contrato de Resseguro",
-                    "size": "50",
-                    "nullable": false
-                }
-            }
-        ],
-        "description": "Contrato de Resseguro",
-        "size": "-",
-        "nullable": true
     },
     "coberturas_afetadas": {
         "type": [
@@ -164,7 +149,7 @@
                 "status": {
                     "type": "int",
                     "description": "Status do Sinistro",
-                    "size": "1",
+                    "size": "2",
                     "nullable": false
                 },
                 "data_ocorrencia": {
@@ -178,6 +163,12 @@
                     "description": "Forma de Pagamento da Indeniza\u00e7\u00e3o",
                     "size": "2",
                     "nullable": false
+                },
+                "descricao_forma_indenizacao": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o da Forma de Pagamento da Indeniza\u00e7\u00e3o",
+                    "size": "500",
+                    "nullable": true
                 },
                 "data_liquidacao": {
                     "type": "date",
@@ -272,6 +263,12 @@
                             "size": "18,2",
                             "nullable": false
                         },
+                        "valor_receita_fin": {
+                            "type": "decimal(18,2)",
+                            "description": "Valor da Receita Financeira Adicional",
+                            "size": "18,2",
+                            "nullable": false
+                        },
                         "cessionarias_cosseguro": {
                             "type": [
                                 {
@@ -337,6 +334,12 @@
                                 "size": "2",
                                 "nullable": false
                             },
+                            "descricao_tipo_documento": {
+                                "type": "string",
+                                "description": "Descri\u00e7\u00e3o do Tipo de Documento do Benefici\u00e1rio Final",
+                                "size": "500",
+                                "nullable": true
+                            },
                             "nome": {
                                 "type": "string",
                                 "description": "Nome do Benefici\u00e1rio ",
@@ -385,23 +388,47 @@
                                 "size": "18,2",
                                 "nullable": false
                             },
-                            "pagamento_prazo": {
-                                "type": "int",
-                                "description": "Prazo de Pagamento",
-                                "size": "5",
-                                "nullable": true
-                            },
-                            "diferimento_data_fim": {
+                            "acumulacao_data_fim": {
                                 "type": "date",
-                                "description": "Data do fim do per\u00eddo de diferimento",
+                                "description": "Data do fim do per\u00edodo de acumula\u00e7\u00e3o",
+                                "size": "10",
+                                "nullable": false
+                            },
+                            "renda_data_inicio": {
+                                "type": "date",
+                                "description": "Data do in\u00edcio do pagamento da renda",
                                 "size": "10",
                                 "nullable": false
                             },
                             "renda_data_fim": {
                                 "type": "date",
-                                "description": "Data do fim do pagamento do benef\u00edcio",
+                                "description": "Data do fim do pagamento da renda",
                                 "size": "10",
                                 "nullable": false
+                            },
+                            "renda_data_inicio_periodo": {
+                                "type": "date",
+                                "description": "Data de in\u00edcio do per\u00edodo de pagamento",
+                                "size": "10",
+                                "nullable": true
+                            },
+                            "renda_data_fim_periodo": {
+                                "type": "date",
+                                "description": "Data de fim do per\u00edodo de pagamento",
+                                "size": "10",
+                                "nullable": true
+                            },
+                            "periodicidade_renda": {
+                                "type": "int",
+                                "description": "Periodicidade do Pagamento",
+                                "size": "2",
+                                "nullable": false
+                            },
+                            "periodicidade_descricao": {
+                                "type": "string",
+                                "description": "Descri\u00e7\u00e3o da Periodicidade do Pagamento",
+                                "size": "500",
+                                "nullable": true
                             },
                             "possui_reversao": {
                                 "type": "boolean",
@@ -439,6 +466,12 @@
                                 "size": "2",
                                 "nullable": true
                             },
+                            "descricao_atualizacao_indice": {
+                                "type": "string",
+                                "description": "Descri\u00e7\u00e3o do \u00cdndice de Atualiza\u00e7\u00e3o Monet\u00e1ria",
+                                "size": "500",
+                                "nullable": true
+                            },
                             "regime_tributario": {
                                 "type": "int",
                                 "description": "Regime Tribut\u00e1rio",
@@ -468,8 +501,20 @@
                 },
                 "tipo_cobertura": {
                     "type": "int",
-                    "description": "Identifica o tipo da cobertura à qual o objeto se refere",
+                    "description": "Tipo da Cobertura",
                     "size": "1",
+                    "nullable": false
+                },
+                "vistoria_realizada": {
+                    "type": "boolean",
+                    "description": "Vistoria realizada?",
+                    "size": "-",
+                    "nullable": false
+                },
+                "colheita_realizada": {
+                    "type": "boolean",
+                    "description": "Colheita realizada?",
+                    "size": "-",
                     "nullable": false
                 },
                 "data_ocorrencia_inicio": {
@@ -532,6 +577,12 @@
                     "size": "2",
                     "nullable": false
                 },
+                "descricao_evento_gerador": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o (Evento Gerador Outros)",
+                    "size": "500",
+                    "nullable": true
+                },
                 "franquia_rural": {
                     "type": "decimal(18,2)",
                     "description": "Valor da Franquia",
@@ -584,37 +635,37 @@
                     "type": "int",
                     "description": "Causa do Sinistro",
                     "size": "2",
-                    "nullable": true
+                    "nullable": false
                 },
                 "sexo": {
                     "type": "int",
                     "description": "Sexo do condutor do ve\u00edculo no momento do sinistro",
                     "size": "2",
-                    "nullable": true
+                    "nullable": false
                 },
                 "data_nascimento": {
                     "type": "date",
                     "description": "Data de nascimento do condutor do ve\u00edculo no momento do sinistro",
                     "size": "10",
-                    "nullable": true
+                    "nullable": false
                 },
                 "municipio_sinistro": {
                     "type": "int",
                     "description": "Munic\u00edpio de ocorr\u00eancia do sinistro",
                     "size": "7",
-                    "nullable": true
+                    "nullable": false
                 },
                 "uf": {
                     "type": "string",
                     "description": "UF de ocorr\u00eancia do sinistro",
                     "size": "2",
-                    "nullable": true
+                    "nullable": false
                 },
                 "cep_localidade_sinistro": {
                     "type": "string",
                     "description": "CEP da localidade de ocorr\u00eancia do sinistro",
                     "size": "30",
-                    "nullable": true
+                    "nullable": false
                 }
             }
         ],
@@ -626,13 +677,13 @@
         "type": {
             "numero_convenio": {
                 "type": "string",
-                "description": "Indica o número do convênio (Carta Verde)",
+                "description": "N\u00famero do Conv\u00eanio",
                 "size": "50",
                 "nullable": false
             },
             "pais_ocorrencia_sinistro": {
                 "type": "string",
-                "description": "País de ocorrência do sinistro (Carta Verde)",
+                "description": "Pa\u00eds de ocorr\u00eancia do sinistro",
                 "size": "3",
                 "nullable": false
             }
@@ -655,6 +706,12 @@
                     "description": "Tipo de Documento do Benefici\u00e1rio Final",
                     "size": "2",
                     "nullable": false
+                },
+                "descricao_tipo_documento": {
+                    "type": "string",
+                    "description": "Descri\u00e7\u00e3o do Tipo de Documento do Benefici\u00e1rio Final",
+                    "size": "500",
+                    "nullable": true
                 },
                 "nome": {
                     "type": "string",
